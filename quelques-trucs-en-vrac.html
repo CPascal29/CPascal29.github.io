@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="Kubuntu" />
+    <meta name="tags" content="Edgy" />
+    <meta name="tags" content="Thunderbird" />
+    <meta name="tags" content="Firefox" />
+    <meta name="tags" content="cups" />
+    <meta name="tags" content="amarok" />
+    <meta name="tags" content="permissions" />
+    <meta name="tags" content="mysql" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>Quelques trucs en vrac</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2006-12-07T21:42:00+01:00" pubdate>
+                    le jeu. 07 décembre 2006
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/kubuntu.html">Kubuntu</a></li>
+                <a class="link-item" href="/tag/edgy.html">Edgy</a></li>
+                <a class="link-item" href="/tag/thunderbird.html">Thunderbird</a></li>
+                <a class="link-item" href="/tag/firefox.html">Firefox</a></li>
+                <a class="link-item" href="/tag/cups.html">cups</a></li>
+                <a class="link-item" href="/tag/amarok.html">amarok</a></li>
+                <a class="link-item" href="/tag/permissions.html">permissions</a></li>
+                <a class="link-item" href="/tag/mysql.html">mysql</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Un disque dur neuf, une kubuntu Edgy Eft fraîchement installée, il reste quelques petits réglages a effectuer pour que tout soit parfait. Voici donc quelques trucs en vrac que je poste ici afin de ne plus avoir à les chercher le cas échéant. Ils paraîtront certainement évidents à beaucoup, on les trouve ailleurs sur internet ou dans la documentation (heureusement pour moi) mais ils ont occupé quelques soirées de l'amateur "éclairé" peut être mais non informaticien que je suis.</p>
+<ul>
+<li><strong>Utiliser Thunderbird par défaut dans Firefox</strong></li>
+</ul>
+<p>Ouvrir Firefox<br>
+   dans la barre d'adresse entrer <em>about:config</em><br>
+   cliquer droit sur la page et choisir <em>nouvelle chaîne de caractères</em><br>
+   lui donner comme nom : <em>network.protocol-handler.app.mailto</em><br>
+   lui donner comme valeur : <em>mozilla-thunderbird</em> (voire simplement thunderbird pour les distributions les plus récentes).</p>
+<ul>
+<li>
+<p><strong>Utiliser Firefox par défaut dans Thunderbird</strong></p>
+<ul>
+<li>
+<p>pour une distribution basée sur Debian, taper dans une console avec les droits root<br>
+<em>update-alternatives --config x-www-browser</em><br>
+  et choisir l'option correspondant à Firefox;</p>
+</li>
+<li>
+<p>quelle que soit la distribution,<br>
+  ouvrir Thunderbird<br>
+  aller dans "Edition" "Préférences"<br>
+  Section "Avancé", onglet "général", cliquer sur <em>Editeur de configuration</em><br>
+  cliquer droit et choisir <em>nouvelle chaîne de caractères</em><br>
+  lui donner comme nom : <em>network.protocol-handler.app.http</em><br>
+  lui donner comme valeur : <em>mozilla-firefox</em> (voire simplement firefox pour les distributions les plus récentes).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Utiliser Firefox et Thunderbird par défaut dans les applications de KDE</strong></p>
+</li>
+</ul>
+<p>Définir ces deux logiciels respectivement comme navigateur et lecteur de courrier par défaut dans le gestionnaire de configuration de KDE (menu K, réglages du système, applications par défaut, dans ma Kubuntu par exemple).</p>
+<ul>
+<li><strong>Utiliser cups-pdf avec kubuntu (ubuntu en général) et cups en version 1.2.0 ou supérieure</strong></li>
+</ul>
+<p>Pour faire apparaître l'imprimante pdf dans la liste des imprimantes disponibles (choix <em>autre type d'imprimante</em>), taper dans une console :<br>
+<em>sudo chmod +s /usr/lib/cups/backend/cups-pdf</em><br>
+   si vous rencontrez un problème lors du chargement du pilote (choisir imprimante générique postcript), taper dans une console :<br>
+<em>sudo foomatic-cleanupdrivers</em></p>
+<ul>
+<li><strong>Lire des MP3 avec Amarok</strong></li>
+</ul>
+<p>Installer le paquet <em>libxine-extracodecs</em></p>
+<ul>
+<li><strong>Modifier les permissions de tous les sous répertoires d'un dossier sans toucher aux permissions des fichiers</strong></li>
+</ul>
+<p>Dans une console, se placer dans le dossier concerné et taper par exemple (droits root nécessaires si on se trouve hors de son répertoire utilisateur personnel évidemment)<br>
+<em>find . -type d | xargs chmod 755</em></p>
+<ul>
+<li><strong>Sécuriser mysql après installation</strong></li>
+</ul>
+<p>Au minimum, ajouter un mot de passe à l'administrateur via phpmyadmin par exemple<br>
+   plus simplement, taper dans une console (avec les droits root faut-il le répéter ;-))<br>
+<em>mysql_secure_installation</em><br>
+   et répondre aux quelques questions posées.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>

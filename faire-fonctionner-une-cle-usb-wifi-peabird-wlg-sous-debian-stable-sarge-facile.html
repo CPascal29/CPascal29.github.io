@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="clé" />
+    <meta name="tags" content="USB" />
+    <meta name="tags" content="Wifi" />
+    <meta name="tags" content="Peabird" />
+    <meta name="tags" content="Ndiswrapper" />
+    <meta name="tags" content="procédure" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>Faire fonctionner une clé USB WIFI Peabird WLG sous Debian stable (Sarge) : facile</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2006-03-04T02:09:00+01:00" pubdate>
+                    le sam. 04 mars 2006
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/cle.html">clé</a></li>
+                <a class="link-item" href="/tag/usb.html">USB</a></li>
+                <a class="link-item" href="/tag/wifi.html">Wifi</a></li>
+                <a class="link-item" href="/tag/peabird.html">Peabird</a></li>
+                <a class="link-item" href="/tag/ndiswrapper.html">Ndiswrapper</a></li>
+                <a class="link-item" href="/tag/procedure.html">procédure</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Suite à mes soucis avec mon port PCMCIA, j'ai acheté une clé USB WIFI. J'ai pris la Peabird WLG (24,9 euros).</p>
+<p>Après quelques recherches, elle semblait basée sur un chipset Prism02 mais en fait le modèle a changé et il s'agit maintenant d'un chipset SiS (pilote windows : SiS163u.inf). Dans les deux cas une seule solution : Ndiswrapper. Un petit soucis cependant, Ndiswrapper ne fonctionne avec ce chipset qu'à partir de sa version 1.5, ce qui exclu l'utilisation du paquet .deb de ma Sarge (1.1-4 il me semble). Pas grave, la procédure à suivre reste simple :</p>
+<p>Télécharger les sources de la dernière version de Ndiswrapper (http://sourceforge.net/projects/ndiswrapper/).</p>
+<p>Récupérer sur le cdrom de la clé ou sur le site Peabird (http://www.peabird.com/ftp/) le pilote pour windows (SiS163u.inf en l'occurence).</p>
+<p>Dans une console avec les droits root, décompresser l'archive de Ndiswrapper, se placer dans le répertoire créé et lancer un :</p>
+<ul>
+<li><em>./debian/rules binary</em> (il est nécessaire d'avoir le paquet debhelper installé).</li>
+</ul>
+<p>On se retrouve assez rapidement avec les fichiers suivants (ici avec un kernel 2.6.8 et la version 1.10 de ndiswrapper) :</p>
+<ul>
+<li>ndiswrapper-utils_1.7-1_i386.deb.  </li>
+<li>ndiswrapper-modules-2.6.8-2-386_1.10-1_i386.deb.</li>
+</ul>
+<p>Chez moi les sources étaient dans /usr/src/ndiswrapper-1.10, et les deux fichiers ci-dessus dans /usr/src.<br>
+Installation avec dpkg -i en commençant par le paquet "utils" puis le paquet "modules".</p>
+<p>Il reste à paramétrer ndiswrapper de la manière suivante :</p>
+<ul>
+<li>ndiswrapper -i /chemin vers les pilotes windows/SiS163u.inf.  </li>
+<li>ndiswrapper -l (pour vérifier que le pilote est bien chargé).  </li>
+<li>modprobe ndiswrapper.</li>
+</ul>
+<p>Et là, alléluyah, la diode s'allume sur la clé USB. Il ne reste plus qu'a paramétrer votre réseau. <br>
+Ah si, pour que ndiswrapper se relance automatiquement au prochain démarrage :</p>
+<ul>
+<li>ndiswrapper -m.</li>
+</ul>
+<p>Voila, c'est fini. Je remercie au passage navy pour l'aide qu'il m'a apportée sur le forum de wlanfr.net.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>

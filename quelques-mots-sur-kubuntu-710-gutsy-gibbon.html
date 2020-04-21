@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="migration" />
+    <meta name="tags" content="bilan" />
+    <meta name="tags" content="gutsy" />
+    <meta name="tags" content="gibbon" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>Quelques mots sur kubuntu 7.10 "Gutsy Gibbon"</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2008-04-10T21:57:00+02:00" pubdate>
+                    le jeu. 10 avril 2008
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/migration.html">migration</a></li>
+                <a class="link-item" href="/tag/bilan.html">bilan</a></li>
+                <a class="link-item" href="/tag/gutsy.html">gutsy</a></li>
+                <a class="link-item" href="/tag/gibbon.html">gibbon</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Un peu tardivement il est vrai et bien que l'arrivée du "Hardy Heron" soit imminente, je vais faire un petit résumé de mon passage sous "gutsy" il y a quelques mois.</p>
+<p>Cette fois ci pas de mise à jour mais une installation propre qui s'est déroulée sans problème.</p>
+<p>Par rapport à "gutsy", quelques interventions post installation telles que décrites dans des billets précédents n'ont plus été nécessaires (<a href="quelques-trucs-en-vrac.html">cups-pdf</a>, <a href="petits-problemes-apres-mise-a-jour-vers-feisty-phpmysql.html">apache/php/mysql</a>). </p>
+<p>Par contre j'ai effectivement du renouveler les procédures décrites <a href="pinnacle-pctv-usb-stick-et-feisty-fawn.html">ici</a> (installation d'un stick USB Pinnacle PCTV TNT) et <a href="petits-problemes-apres-mise-a-jour-vers-feisty-samba.html">là</a> (Samba).</p>
+<p>Seul un problème m'a posé quelques difficultés, la prise en compte de ma clé wifi Ovislink EVO W54USB fonctionnant avec un pilote Ralink (le rt2570) ou le pilote libre serialmonkey (rtxx00).<br>
+Tout a commencé par une fausse joie, après branchement de la clé, celle-ci est reconnue par knetworkmanager. Je paramètre l'ESSID, le WPA et ... pas moyen de se connecter ! Après quelques recherches sur internet dans les forums Ubuntu notamment (toujours aussi précieux en cas de difficultés), il semble s'agir d'un problème lié au noyau qui ne devrait donc pas être résolu avant la prochaine version (Hardy). Une solution préconisée, en attendant, est l'utilisation de Ndiswrapper.<br>
+Conforté par mon expérience kubuntienne, j'ai voulu passer par les pilotes propriétaires Ralink. Déception, ça ne marche plus même en utilisant la méthode décrite <a href="petits-problemes-apres-mise-a-jour-vers-feisty-cle-ovislink.html">ici</a>. Finalement, j'ai utilisé la dernière version cvs du pilote libre rt2570 et de RutilT.</p>
+<p>Bref, au bilan la "Gutsy" marche bien et donne toute satisfaction. On verra si le "Hardy Heron" corrige les quelques dérangements rencontrés mais si le fonctionnement est au moins aussi bon que celui du "Gutsy Gibbon" je pense que je vais espacer mes mises à jour et le faire durer un peu plus longtemps.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>

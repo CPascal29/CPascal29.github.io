@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="Sarge" />
+    <meta name="tags" content="ordinosaures" />
+    <meta name="tags" content="distributions" />
+    <meta name="tags" content="pentium" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>Sarge et les ordinosaures</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2005-10-05T00:02:00+02:00" pubdate>
+                    le mer. 05 octobre 2005
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/sarge.html">Sarge</a></li>
+                <a class="link-item" href="/tag/ordinosaures.html">ordinosaures</a></li>
+                <a class="link-item" href="/tag/distributions.html">distributions</a></li>
+                <a class="link-item" href="/tag/pentium.html">pentium</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Et donc en attendant de récupérer mon beau portable tout neuf parti se faire repinocher le port PCMCIA, j'ai récupéré ma vieille bécane, un portable unika avec pentium 100 MMX, 128 Mo de mémoire et 3 Go de Disque dur (comment ça je l'ai déjà dit dans un post précédent...)</p>
+<p>Problème, ce dernier n'avait plus Linux dessus et ouin ouin 98, bon ok, mais bon quoi... Alors j'ai ressorti les distributions sur CDROM en ma possession pour quelques expérimentations.</p>
+<p>Premier essai : live CD <strong>Mepis 3.3.1</strong><br>
+ça ramait tellement (environ 40' juste pour booter) que j'ai craqué avant d'avoir pu faire un quelconque essai d'installation. Je n'étais même pas sur que l'option soit disponible d'ailleurs.</p>
+<p>Deuxième essai : <strong>Knoppix 3.8.1</strong><br>
+là pas de problème, boot rapide, lancement de knoppix-installer, repartionnement du disque, quelques soucis avec gparted mais rien de bien grave. Seulement voila, j'avais juste oublié qu'il fallait à knoppix au moins 3 Go disponibles, hors c'est la taille de mon disque et une fois quelques mégas alloués à la swap...<br>
+Nouvel échec donc, au suivant.</p>
+<p>Troisième essai : <strong>Freesbie</strong><br>
+après tout, pourquoi ne pas changer un peu et essayer une bsd ? Pas de chance, plantage en cours de boot. Le problème est simple et connu, mon sasfépu ne supporte pas bien que l'option DMA soit activée, ce qui est le cas dans la plupart des distributions récentes. Généralement, il y a moyen de modifier ça au lancement mais avec la Freesbie impossible (où en tout cas je n'ai pas trouvé).<br>
+Fin de la première soirée.</p>
+<p>Dernier essai, le bon : <strong>Debian Sarge</strong><br>
+fini donc les expérimentations "exotiques" et retour en terrain connu.<br>
+Evidemment, avec ma configuration il vaut mieux éviter KDE ou GNOME. Quand j'étais encore sur cette machine avant l'achat de mon nouveau portable (celui qui est chez le réparateur, faut suivre), j'avais passé pas mal de temps avec Afterstep mais j'avais du changer avec l'arrivée de la version 2.0 (trop lourde). Window Maker avait pris la suite. Cette fois-ci je suis sous Icewm et je le trouve vraiment très bien. Léger, agréable, facile à configurer, j'aime bien. L'attente sera moins longue comme ça avant de retrouver la technologie moderne.</p>
+<p>Je suis quand même bien content de l'avoir encore mon ordinosaure.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>

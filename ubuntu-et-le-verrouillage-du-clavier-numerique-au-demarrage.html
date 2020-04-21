@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="Ubuntu" />
+    <meta name="tags" content="démarrage" />
+    <meta name="tags" content="numlock" />
+    <meta name="tags" content="verrouillage" />
+    <meta name="tags" content="clavier" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>Ubuntu et le verrouillage du clavier numérique au démarrage</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2019-11-23T22:19:00+01:00" pubdate>
+                    le sam. 23 novembre 2019
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/ubuntu.html">Ubuntu</a></li>
+                <a class="link-item" href="/tag/demarrage.html">démarrage</a></li>
+                <a class="link-item" href="/tag/numlock.html">numlock</a></li>
+                <a class="link-item" href="/tag/verrouillage.html">verrouillage</a></li>
+                <a class="link-item" href="/tag/clavier.html">clavier</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Un petit détail agaçant avec Ubuntu : au démarrage, lorsqu'on arrive à l'écran d'authentification, le clavier numérique n'est pas activé. Si on n'y pense pas et que le mot de passe contient des chiffres, cela peut amener quelques désagréments.</p>
+<p>Une solution pour y remédier passe par l'installation du paquet numlockx mais il y a plus simple. Dans un terminal, exécuter successivement les trois commandes suivantes :</p>
+<blockquote>
+<p>sudo -i</p>
+<p>su gdm -s /bin/bash</p>
+<p>gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'</p>
+</blockquote>
+<p>Merci à Lynn qui a donné cette solution sur le forum ubuntu-fr : <a href="https://forum.ubuntu-fr.org/viewtopic.php?id=2024787">https://forum.ubuntu-fr.org/viewtopic.php?id=2024787</a></p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>

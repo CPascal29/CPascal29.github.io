@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="veille" />
+    <meta name="tags" content="nvidia" />
+    <meta name="tags" content="NVIDIA" />
+    <meta name="tags" content="debian" />
+    <meta name="tags" content="kubuntu" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>NVIDIA, ACPI et mise en veille</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2007-07-15T14:25:00+02:00" pubdate>
+                    le dim. 15 juillet 2007
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/veille.html">veille</a></li>
+                <a class="link-item" href="/tag/nvidia.html">nvidia</a></li>
+                <a class="link-item" href="/tag/nvidia.html">NVIDIA</a></li>
+                <a class="link-item" href="/tag/debian.html">debian</a></li>
+                <a class="link-item" href="/tag/kubuntu.html">kubuntu</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Il y a quelques mois, j'ai décidé de m'intéresser de plus près aux problèmes chroniques de mise en veille que je rencontrais sur mon portable. En fait, que ce soit quand j'étais sous Debian (stable ou testing) ou depuis avec kubuntu (6.10 Edgy Eft), je n'avais jamais réussi à faire fonctionner la mise en veille en RAM ou sur disque. Avec une exception toutefois, cela marchait bien par défaut avec Dapper Drake (kubuntu 6.06).</p>
+<p>Après quelques recherches, j'ai trouvé la solution de mon problème à l'adresse suivante :</p>
+<ul>
+<li><a href="http://forum.ubuntu-fr.org/viewtopic.php?id=86849">http://forum.ubuntu-fr.org/viewtopic.php?id=86849</a></li>
+</ul>
+<p>J'utilisais le même pilote NVIDIA que l'auteur du message ainsi que le kernel par défaut Edgy (mis à part qu'il y avait eu une mise à jour entre temps). J'ai vérifié grâce à <em>lsmod</em> que <em>sis_agp</em> et <em>agpgart</em> étaient bien chargés sur mon portable puis j'ai suivi la procédure à la lettre et cela a marché parfaitement.</p>
+<p>Depuis, j'ai fait une mise à jour vers Feisty Fawn (kubuntu 7.04) et cela fonctionne toujours.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>

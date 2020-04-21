@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="Wifi" />
+    <meta name="tags" content="clé" />
+    <meta name="tags" content="USB" />
+    <meta name="tags" content="pilote" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>Cette fois ci c'est une Ovislink EVO W54USB</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2006-07-01T22:39:00+02:00" pubdate>
+                    le sam. 01 juillet 2006
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/wifi.html">Wifi</a></li>
+                <a class="link-item" href="/tag/cle.html">clé</a></li>
+                <a class="link-item" href="/tag/usb.html">USB</a></li>
+                <a class="link-item" href="/tag/pilote.html">pilote</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Je me suis acheté une deuxième clé USB wifi, supportant le wpa cette fois, l'Ovislink Evolution EVO W54USB. Autre avantage, elle est basée sur un chipset Ralink pour lequel il existe un pilote linux. On en trouve une version sur le site d'Ovislink mais le mieux est encore d'aller chercher la dernière en date chez <a href="http://www.ralinktech.com/supp-1.htm">Ralink</a>. Il en existe également une version libre téléchargeable <a href="http://rt2x00.serialmonkey.com/wiki/index.php/Downloads">ici</a>.</p>
+<p><strong>Installation du pilote</strong></p>
+<p>Une fois le pilote téléchargé et décompressé la procédure d'installation est simple : (et nécessite bien sur d'avoir installé les headers ou les sources de son noyau)</p>
+<ul>
+<li>
+<p>Se placer dans le répertoire obtenu après décompression (pour moi RT25USB-SRC-V2.0.7.0).</p>
+</li>
+<li>
+<p><em>cp Makefile.x Makefile</em><br>
+où x est à remplacer par le version de son noyau (4 pour un 2.4 ou 6 pour un 2.6)</p>
+</li>
+<li>
+<p><em>make</em><br>
+pour construire le module (le chemin du répertoire dans lequel la commande est exécutée ne doit pas contenir d'espaces).</p>
+</li>
+</ul>
+<p>Pas d'installation automatique, il faut faire à la main (en tant que root) :</p>
+<ul>
+<li>
+<p><em>mkdir -p /lib/modules/\$(uname -r)/kernel/drivers/net/wireless/rt2570</em></p>
+</li>
+<li>
+<p><em>cp rt2570.ko /lib/modules/\$(uname -r)/kernel/drivers/net/wireless/rt2570</em></p>
+</li>
+<li>
+<p><em>depmod -a</em></p>
+</li>
+</ul>
+<p>Puis :</p>
+<ul>
+<li><em>insmod rt2570</em><br>
+pour charger le module en mémoire.</li>
+</ul>
+<p>J'ai ensuite ajouté <em>alias rausb0 rt2570</em> dans mon /etc/modutils/aliases avant de lancer un update-modules pour que le chargement soit automatique au démarrage.</p>
+<p><strong>Configuration de la carte</strong></p>
+<p>Pour la configuration du réseau, il y a principalement deux possibilités, soit utiliser /etc/network/interfaces pour que la connexion se fasse au démarrage, soit utiliser l'interface graphique de configuration de Ralink : raconfig2500 après le démarrage. Dans les deux cas, si vous souhaitez utiliser le wpa il n'est pas nécessaire d'avoir recours à wpasupplicant, le pilote Ralink se débrouille très bien tout seul dans ce domaine.</p>
+<p>[Dans le premier cas]{.underline}, voici ce que j'ai rajouté dans mon fichier /etc/network/interfaces :</p>
+<p><em># The wifi interface<br>
+auto rausb0<br>
+iface rausb0 inet dhcp<br>
+pre-up ifconfig rausb0 up<br>
+pre-up iwpriv rausb0 auth 3<br>
+pre-up iwpriv rausb0 enc 3<br>
+pre-up iwconfig rausb0 essid monreseau<br>
+pre-up iwpriv rausb0 wpapsk monpasswpa<br>
+pre-up iwconfig rausb0 essid monreseau</em></p>
+<p>Il faut évidemment remplacer monreseau par l'ESSID de votre réseau et monpasswpa par votre clé wpa.</p>
+<p>[Dans le deuxième cas]{.underline}, il faut commencer par compiler raconfig2500, ce qui nécessite en prérequis d'avoir installé :</p>
+<p><em>libqt3-mt-dev<br>
+qt3-dev-tools</em><br>
+et pas forcément obligatoire mais recommandé <em>libqt3-compat-headers</em>.</p>
+<p>Ensuite il faut se placer dans le répertoire de raconfig qui est inclu dans RT25USB-SRC-V2.0.7.0, dans mon cas LINUX_RACONFIG_V2.0.0.7 et taper les commandes suivantes :</p>
+<p><em>qmake -o Makefile raconfig2500.pro</em></p>
+<p><em>make</em></p>
+<p>Vous pouvez au choix laisser l'exécutable obtenu dans son répertoire ou le transférer ailleurs, personnellement je l'ai mis dans /usr/local/bin. Enfin, j'ai ajouté une entrée dans le menu de kde en cochant la case de kmenuedit permettant de l'exécuter avec les droits root, chose dont il a besoin.</p>
+<p>Pour utiliser raconfig il faut au préalable à son lancement taper dans une console : <em>ifconfig rausb0 up</em><br>
+et de la même façon après avoir activé sa carte dans raconfig il est nécessaire de taper : <em>dhclient rausb0</em> pour pouvoir accéder à internet.</p>
+<p><strong>Utilisation avec Kismet</strong></p>
+<p>Kismet ne fonctionne pas avec le pilote ralink mais pourrait fonctionner avec le pilote libre (je n'ai pas essayé).</p>
+<p><strong>Sites qui m'ont apporté une aide appréciable (même si j'utilise une Sarge et pas une Ubuntu)</strong> :</p>
+<p><a href="http://doc.ubuntu-fr.org/materiel/wifi/rt2500usb">http://doc.ubuntu-fr.org/materiel/wifi/rt2500usb</a><br>
+<a href="http://doc.ubuntu-fr.org/materiel/wifi/rt2500">http://doc.ubuntu-fr.org/materiel/wifi/rt2500</a><br>
+<a href="https://help.ubuntu.com/community/WifiDocs/Driver/RalinkRT2500">https://help.ubuntu.com/community/WifiDocs/Driver/RalinkRT2500</a></p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>

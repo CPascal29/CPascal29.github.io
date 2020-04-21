@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <title>Le coin de Tropez</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+        
+    
+    
+
+    <meta name="tags" content="migration" />
+    <meta name="tags" content="Dotclear" />
+    <meta name="tags" content="Free" />
+</head>
+
+<body>
+<header class="header-bar">
+    <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+    <span class="inline">
+        <ul class="categories">
+          <li>
+              <a href="/category/general.html">General (3)</a>
+          </li>
+          <li>
+              <a href="/category/linux.html">Linux (41)</a>
+          </li>
+          <li>
+              <a href="/category/wifi.html">Wifi (11)</a>
+          </li>
+       </ul></span>
+</header>
+    <div class="main"> 
+<nav class="sidebar-nav">
+    
+<form action="search.html">
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+<button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
+</div>
+</form>        
+    <ul class="links">
+        <dl>
+    			<dt><h3>Le monde Libre</h3></dt>
+            <dd>
+                <a href="https://aful.org/">Aful</a>
+            </dd>
+            <dd>
+                <a href="https://www.april.org/">APRIL</a>
+            </dd>
+            <dd>
+                <a href="http://www.finix.eu.org/">Finix</a>
+            </dd>
+            <dd>
+                <a href="https://www.infini.fr/">Infini</a>
+            </dd>
+            <dd>
+                <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+            </dd>
+            <dd>
+                <a href="https://www.mdl29.net/">Maison du libre</a>
+            </dd>
+            <dd>
+                <a href="https://tyfab.fr/">Tyfab</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Associations</h3></dt>
+            <dd>
+                <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+            </dd>
+            <dd>
+                <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><h3>Blogs</h3></dt>
+            <dd>
+                <a href="https://base-art.net/">Base-Art</a>
+            </dd>
+            <dd>
+                <a href="http://www.cure.nom.fr/">David on net</a>
+            </dd>
+            <dd>
+                <a href="http://www.larsen-b.com/">Jkx@home</a>
+            </dd>
+        </dl>
+    </ul>
+</nav>        <div class="content">
+<section class="article">
+    <header>
+        <h1>Migration accomplie</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2009-08-21T20:51:00+02:00" pubdate>
+                    le ven. 21 août 2009
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/migration.html">migration</a></li>
+                <a class="link-item" href="/tag/dotclear.html">Dotclear</a></li>
+                <a class="link-item" href="/tag/free.html">Free</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Après quelques tentatives inabouties, j'ai finalement effectué la migration de la version 1.2.8 vers la version 2.1.5 de <a href="http://fr.dotclear.org">Dotclear</a>.</p>
+<p>En fait, le plus compliqué a été de repersonnaliser le blog vu qu'il y a incompatibilité entre les thèmes des deux versions. <a href="http://themes.dotaddict.org">DotAddict</a> m'a été d'un grand secours et une fois que j'ai eu trouvé quelque chose qui se rapprochait de mes préférences, un peu de bidouillage dans les fichiers de style via l'éditeur de thème a fait le reste.</p>
+<p>Pour la suite, mes choix ont été dictés par les restrictions liées à l'hébergement pages personnelles de <a href="http://portail.free.fr">Free</a> :</p>
+<ul>
+<li>
+<p>la récupération des données a été effectuée (très simplement) via le plugin flatexport;</p>
+</li>
+<li>
+<p>l'activation de php5 est nécessaire et se fait via la création d'un fichier texte contenant juste php 1 enregistré à la racine du blog sous l'appellation .htaccess;</p>
+</li>
+<li>
+<p>il faut activer la base postgreSQL proposée par Free. Dotclear 2 ne fonctionne pas avec la version disponible de mySQL. Cela ne pose aucun problème pratique si la base mySQL est déjà activée car Free autorise la cohabitation des deux;</p>
+</li>
+<li>le plugin fortune n'étant pas supporté par Dotclear 2, j'ai utilisé <a href="https://plugins.dotaddict.org/dc2/details/bashfrquote">BashFR Quote</a> pour les citations.</li>
+</ul>
+<p>Et voila, le résultat est là.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>Site réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>
+</body>
+</html>
