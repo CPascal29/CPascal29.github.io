@@ -5,11 +5,9 @@
   background-color: #004000;
   background-image: url("/static/images/top.png");
   background-size: cover;
-  box-shadow: 0 1px 0 rgba(12,13,14,0.1),0 1px 6px rgba(59,64,69,0.1);
   display:flex;
-  flex-direction:row;
-  justify-content:space-between;
-  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 a.header-nav {
@@ -28,16 +26,15 @@ a.header-nav img {
   margin-left: 50px;
   display: inline-block;
   vertical-align: middle
-  order: 1;
 }
 
 .inline {
   margin-right: 50px;
+ 
 }
 
 .inline li{ 
   display:inline;
-  order: 2; 
 }
 
 .inline a{ 
@@ -68,12 +65,13 @@ body {
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  flex-grow: 1;
 }
 
 .content {
   order: 1;
   width: 65%;
+  float: right;
+  display: inline-block;
   margin-left: 0px;
   padding: 20px;
   background-color: #fff;
