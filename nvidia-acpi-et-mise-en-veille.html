@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -37,9 +38,46 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>NVIDIA, ACPI et mise en veille</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2007-07-15T14:25:00+02:00" pubdate>
+                    le dim. 15 juillet 2007
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/veille.html">veille</a></li>
+                <a class="link-item" href="/tag/nvidia.html">nvidia</a></li>
+                <a class="link-item" href="/tag/nvidia.html">NVIDIA</a></li>
+                <a class="link-item" href="/tag/debian.html">debian</a></li>
+                <a class="link-item" href="/tag/kubuntu.html">kubuntu</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Il y a quelques mois, j'ai décidé de m'intéresser de plus près aux problèmes chroniques de mise en veille que je rencontrais sur mon portable. En fait, que ce soit quand j'étais sous Debian (stable ou testing) ou depuis avec kubuntu (6.10 Edgy Eft), je n'avais jamais réussi à faire fonctionner la mise en veille en RAM ou sur disque. Avec une exception toutefois, cela marchait bien par défaut avec Dapper Drake (kubuntu 6.06).</p>
+<p>Après quelques recherches, j'ai trouvé la solution de mon problème à l'adresse suivante :</p>
+<ul>
+<li><a href="http://forum.ubuntu-fr.org/viewtopic.php?id=86849">http://forum.ubuntu-fr.org/viewtopic.php?id=86849</a></li>
+</ul>
+<p>J'utilisais le même pilote NVIDIA que l'auteur du message ainsi que le kernel par défaut Edgy (mis à part qu'il y avait eu une mise à jour entre temps). J'ai vérifié grâce à <em>lsmod</em> que <em>sis_agp</em> et <em>agpgart</em> étaient bien chargés sur mon portable puis j'ai suivi la procédure à la lettre et cela a marché parfaitement.</p>
+<p>Depuis, j'ai fait une mise à jour vers Feisty Fawn (kubuntu 7.04) et cela fonctionne toujours.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -92,42 +130,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>NVIDIA, ACPI et mise en veille</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2007-07-15T14:25:00+02:00" pubdate>
-                    le dim. 15 juillet 2007
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/veille.html">veille</a></li>
-                <a class="link-item" href="/tag/nvidia.html">nvidia</a></li>
-                <a class="link-item" href="/tag/nvidia.html">NVIDIA</a></li>
-                <a class="link-item" href="/tag/debian.html">debian</a></li>
-                <a class="link-item" href="/tag/kubuntu.html">kubuntu</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Il y a quelques mois, j'ai décidé de m'intéresser de plus près aux problèmes chroniques de mise en veille que je rencontrais sur mon portable. En fait, que ce soit quand j'étais sous Debian (stable ou testing) ou depuis avec kubuntu (6.10 Edgy Eft), je n'avais jamais réussi à faire fonctionner la mise en veille en RAM ou sur disque. Avec une exception toutefois, cela marchait bien par défaut avec Dapper Drake (kubuntu 6.06).</p>
-<p>Après quelques recherches, j'ai trouvé la solution de mon problème à l'adresse suivante :</p>
-<ul>
-<li><a href="http://forum.ubuntu-fr.org/viewtopic.php?id=86849">http://forum.ubuntu-fr.org/viewtopic.php?id=86849</a></li>
-</ul>
-<p>J'utilisais le même pilote NVIDIA que l'auteur du message ainsi que le kernel par défaut Edgy (mis à part qu'il y avait eu une mise à jour entre temps). J'ai vérifié grâce à <em>lsmod</em> que <em>sis_agp</em> et <em>agpgart</em> étaient bien chargés sur mon portable puis j'ai suivi la procédure à la lettre et cela a marché parfaitement.</p>
-<p>Depuis, j'ai fait une mise à jour vers Feisty Fawn (kubuntu 7.04) et cela fonctionne toujours.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

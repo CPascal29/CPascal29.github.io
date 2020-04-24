@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -35,9 +36,46 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Petits problèmes après mise à jour vers Feisty : php/mysql</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2007-07-25T23:11:00+02:00" pubdate>
+                    le mer. 25 juillet 2007
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/lien.html">lien</a></li>
+                <a class="link-item" href="/tag/php.html">php</a></li>
+                <a class="link-item" href="/tag/php5.html">php5</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>J'ai une version de ce blog en local sur mon ordinateur portable, à la fois à titre de sauvegarde et pour expérimenter les quelques changements ou installations de plugins que je décide de faire. Après la mise à jour vers Feisty Fawn, plus moyen d'y accéder. Je suis passé par toute une série de dpkg-reconfigure sur les paquets liés à php5 ou mysql sans succès. Finalement j'ai trouvé, grâce aux différents logs, un problème de chemin de recherche non actualisé. En fait, les libs php5 étaient avec Edgy Eft dans le répertoire :</p>
+<blockquote>
+<p>/usr/lib/php5/20051025/</p>
+</blockquote>
+<p>et elles sont avec Feisty Fawn dans :</p>
+<blockquote>
+<p>/usr/lib/php5/20060613+lfs/</p>
+</blockquote>
+<p>Hors les appels vers ces librairies se faisaient encore à destination de "20051025" d'où le problème. Etant un peu fainéant de nature, je me suis contenté de créer un lien symbolique portant le nom de l'ancien répertoire et pointant vers le nouveau et depuis tout fonctionne à merveille.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -90,42 +128,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Petits problèmes après mise à jour vers Feisty : php/mysql</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2007-07-25T23:11:00+02:00" pubdate>
-                    le mer. 25 juillet 2007
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/lien.html">lien</a></li>
-                <a class="link-item" href="/tag/php.html">php</a></li>
-                <a class="link-item" href="/tag/php5.html">php5</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>J'ai une version de ce blog en local sur mon ordinateur portable, à la fois à titre de sauvegarde et pour expérimenter les quelques changements ou installations de plugins que je décide de faire. Après la mise à jour vers Feisty Fawn, plus moyen d'y accéder. Je suis passé par toute une série de dpkg-reconfigure sur les paquets liés à php5 ou mysql sans succès. Finalement j'ai trouvé, grâce aux différents logs, un problème de chemin de recherche non actualisé. En fait, les libs php5 étaient avec Edgy Eft dans le répertoire :</p>
-<blockquote>
-<p>/usr/lib/php5/20051025/</p>
-</blockquote>
-<p>et elles sont avec Feisty Fawn dans :</p>
-<blockquote>
-<p>/usr/lib/php5/20060613+lfs/</p>
-</blockquote>
-<p>Hors les appels vers ces librairies se faisaient encore à destination de "20051025" d'où le problème. Etant un peu fainéant de nature, je me suis contenté de créer un lien symbolique portant le nom de l'ancien répertoire et pointant vers le nouveau et depuis tout fonctionne à merveille.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

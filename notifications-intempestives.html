@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -37,9 +38,41 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Notifications intempestives</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2011-08-03T21:49:00+02:00" pubdate>
+                    le mer. 03 août 2011
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/notifications.html">notifications</a></li>
+                <a class="link-item" href="/tag/intempestives.html">intempestives</a></li>
+                <a class="link-item" href="/tag/batterie.html">batterie</a></li>
+                <a class="link-item" href="/tag/decharge.html">décharge</a></li>
+                <a class="link-item" href="/tag/solution.html">solution</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Si vous avez comme moi un PC portable un peu ancien, branché 99% du temps sur le secteur, avec une batterie faiblarde, vous avez peut être été aussi ennuyés par des notifications répétées et intempestives en haut à droite de votre écran (je parle d'une Ubuntu 11.4 sous un gnome traditionnel car j'ai viré unity) indiquant que la batterie est en décharge. J'avais déjà eu le même soucis après avoir installé la version 10.4 et j'avais galéré pour y remédier. Comme je n'avais pas noté la solution le problème s'est reposé après installation du Natty Narwhal. Cette fois-ci donc, je le note et je m'en félicite...</p>
+<p>Il suffit d'utiliser le raccourcis clavier <em>ALT F2</em> pour ouvrir le lanceur d'application, lancer <em>gconf-editor</em>, suivre le chemin <em>apps/gnome-power-manager/notify</em> et décocher <em>discharging</em>.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -92,37 +125,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Notifications intempestives</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2011-08-03T21:49:00+02:00" pubdate>
-                    le mer. 03 août 2011
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/notifications.html">notifications</a></li>
-                <a class="link-item" href="/tag/intempestives.html">intempestives</a></li>
-                <a class="link-item" href="/tag/batterie.html">batterie</a></li>
-                <a class="link-item" href="/tag/decharge.html">décharge</a></li>
-                <a class="link-item" href="/tag/solution.html">solution</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Si vous avez comme moi un PC portable un peu ancien, branché 99% du temps sur le secteur, avec une batterie faiblarde, vous avez peut être été aussi ennuyés par des notifications répétées et intempestives en haut à droite de votre écran (je parle d'une Ubuntu 11.4 sous un gnome traditionnel car j'ai viré unity) indiquant que la batterie est en décharge. J'avais déjà eu le même soucis après avoir installé la version 10.4 et j'avais galéré pour y remédier. Comme je n'avais pas noté la solution le problème s'est reposé après installation du Natty Narwhal. Cette fois-ci donc, je le note et je m'en félicite...</p>
-<p>Il suffit d'utiliser le raccourcis clavier <em>ALT F2</em> pour ouvrir le lanceur d'application, lancer <em>gconf-editor</em>, suivre le chemin <em>apps/gnome-power-manager/notify</em> et décocher <em>discharging</em>.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

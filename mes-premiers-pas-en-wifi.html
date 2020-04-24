@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -38,9 +39,51 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Mes premiers pas en wifi</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2005-08-12T23:18:00+02:00" pubdate>
+                    le ven. 12 août 2005
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/wifi.html">Wifi</a></li>
+                <a class="link-item" href="/tag/pcmcia.html">PCMCIA</a></li>
+                <a class="link-item" href="/tag/d-link.html">D-Link</a></li>
+                <a class="link-item" href="/tag/atheros.html">atheros</a></li>
+                <a class="link-item" href="/tag/installation.html">installation</a></li>
+                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>D'abord, mon ordi n'étant pas équipé wifi, j'ai cherché une carte PCMCIA pas trop chère. D'accord il y a aussi des clés USB mais personnellement j'aime moins. J'ai fini par en trouver une sur Ebay. Une D-link DWL-G650 compatible 802-11G avec un chipset atheros, (c'est la révision B, il y a trois versions en tout de cette carte), bien supporté par linux, le tout pour 25 euros.</p>
+<p>Première étape, installer les headers ou les sources du noyau, les paquets "pcmcia-cs" et "wireless-tools".</p>
+<p>Deuxième étape, récupérer le pilote madwifi sur son CVS Sourceforge (il vaut mieux utiliser la dernière version du CVS que le paquet debian, en ce qui me concerne, moins à jour).</p>
+<p>Dernière étape, l'installation et la configuration. Pour ça, les pages suivantes expliquent tout mieux que je ne pourrais le faire :</p>
+<ul>
+<li>http://www.trustonme.net/didactels/293.html (pilote madwifi)  </li>
+<li>http://www.trustonme.net/didactels/304.html (configuration de la carte)  </li>
+<li>http://z.cwriter.org/index.php/wifi/Documentations/RSF+avec+Linux (configuration de pcmcia-cs et variante de configuration de la carte)  </li>
+</ul>
+<p>La mise en place d'une clé wep ne pose pas de problème vraiment significatif.</p>
+<p>Arrivé là tout semble bien marcher. Pour voir la présence d'éventuels hotspots wifi à proximité j'ai installé kismet (paquet debian disponible). Il est important de bien lire la doc (/usr/share/doc/kismet/readme.gz) car il faut configurer kismet pour lui donner le pilote wifi utilisé. Comme il n'y a rien, j'ai décidé d'attendre l'atelier antennes de <a href="http://www.brest-wireless.net/wiki/start">Brest-wireless</a> pour essayer ma carte et voir vraiment ce qu'elle donne. Mais ça c'est une autre histoire, la suite au prochain épisode ...</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -93,47 +136,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Mes premiers pas en wifi</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2005-08-12T23:18:00+02:00" pubdate>
-                    le ven. 12 août 2005
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/wifi.html">Wifi</a></li>
-                <a class="link-item" href="/tag/pcmcia.html">PCMCIA</a></li>
-                <a class="link-item" href="/tag/d-link.html">D-Link</a></li>
-                <a class="link-item" href="/tag/atheros.html">atheros</a></li>
-                <a class="link-item" href="/tag/installation.html">installation</a></li>
-                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>D'abord, mon ordi n'étant pas équipé wifi, j'ai cherché une carte PCMCIA pas trop chère. D'accord il y a aussi des clés USB mais personnellement j'aime moins. J'ai fini par en trouver une sur Ebay. Une D-link DWL-G650 compatible 802-11G avec un chipset atheros, (c'est la révision B, il y a trois versions en tout de cette carte), bien supporté par linux, le tout pour 25 euros.</p>
-<p>Première étape, installer les headers ou les sources du noyau, les paquets "pcmcia-cs" et "wireless-tools".</p>
-<p>Deuxième étape, récupérer le pilote madwifi sur son CVS Sourceforge (il vaut mieux utiliser la dernière version du CVS que le paquet debian, en ce qui me concerne, moins à jour).</p>
-<p>Dernière étape, l'installation et la configuration. Pour ça, les pages suivantes expliquent tout mieux que je ne pourrais le faire :</p>
-<ul>
-<li>http://www.trustonme.net/didactels/293.html (pilote madwifi)  </li>
-<li>http://www.trustonme.net/didactels/304.html (configuration de la carte)  </li>
-<li>http://z.cwriter.org/index.php/wifi/Documentations/RSF+avec+Linux (configuration de pcmcia-cs et variante de configuration de la carte)  </li>
-</ul>
-<p>La mise en place d'une clé wep ne pose pas de problème vraiment significatif.</p>
-<p>Arrivé là tout semble bien marcher. Pour voir la présence d'éventuels hotspots wifi à proximité j'ai installé kismet (paquet debian disponible). Il est important de bien lire la doc (/usr/share/doc/kismet/readme.gz) car il faut configurer kismet pour lui donner le pilote wifi utilisé. Comme il n'y a rien, j'ai décidé d'attendre l'atelier antennes de <a href="http://www.brest-wireless.net/wiki/start">Brest-wireless</a> pour essayer ma carte et voir vraiment ce qu'elle donne. Mais ça c'est une autre histoire, la suite au prochain épisode ...</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

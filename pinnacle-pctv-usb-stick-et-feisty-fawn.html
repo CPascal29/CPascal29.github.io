@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -37,9 +38,45 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Pinnacle PCTV USB stick et Feisty Fawn</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2007-08-10T17:36:00+02:00" pubdate>
+                    le ven. 10 août 2007
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/stick.html">stick</a></li>
+                <a class="link-item" href="/tag/usb.html">USB</a></li>
+                <a class="link-item" href="/tag/pinnacle.html">Pinnacle</a></li>
+                <a class="link-item" href="/tag/pctv.html">PCTV</a></li>
+                <a class="link-item" href="/tag/tnt.html">TNT</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>J'ai acheté un stick USB Pinnacle PCTV spécialisé dans la réception de la TNT. Quelques recherches sur internet m'avaient permis de voir qu'il fonctionnait sous Linux avec les pilotes V4L (em2880 plus précisément). Ces pilotes sont installés par défaut dans ma Kubuntu Feisty mais malheureusement, une fois le stick branché cela ne marchait pas. En fait, il fallait une version plus récente des pilotes. J'ai fini par trouver la solution à mes problèmes ici :</p>
+<ul>
+<li><a href="http://doc.ubuntu-fr.org/pctv_usb_stick">http://doc.ubuntu-fr.org/pctv_usb_stick</a></li>
+</ul>
+<p>Grâce à cette procédure, il m'a fallu moins de 10 minutes pour que le stick soit reconnu. Pas besoin de prendre les pilotes expérimentaux, cela marche très bien avec les pilotes définitifs.</p>
+<p>Remarque : Il faut quand même savoir que le pilote ainsi obtenu n'est pas aussi optimisé que celui de Pinnacle et en cas de mauvaise réception ou de parasitage sur votre ligne d'antenne, la recherche des chaînes peut rester vaine sous Linux alors que le stick marche bien sous windows. Il faut alors trouver un moyen d'améliorer la qualité du signal reçu (ampli, connecteurs blindés,...)</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -92,41 +129,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Pinnacle PCTV USB stick et Feisty Fawn</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2007-08-10T17:36:00+02:00" pubdate>
-                    le ven. 10 août 2007
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/stick.html">stick</a></li>
-                <a class="link-item" href="/tag/usb.html">USB</a></li>
-                <a class="link-item" href="/tag/pinnacle.html">Pinnacle</a></li>
-                <a class="link-item" href="/tag/pctv.html">PCTV</a></li>
-                <a class="link-item" href="/tag/tnt.html">TNT</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>J'ai acheté un stick USB Pinnacle PCTV spécialisé dans la réception de la TNT. Quelques recherches sur internet m'avaient permis de voir qu'il fonctionnait sous Linux avec les pilotes V4L (em2880 plus précisément). Ces pilotes sont installés par défaut dans ma Kubuntu Feisty mais malheureusement, une fois le stick branché cela ne marchait pas. En fait, il fallait une version plus récente des pilotes. J'ai fini par trouver la solution à mes problèmes ici :</p>
-<ul>
-<li><a href="http://doc.ubuntu-fr.org/pctv_usb_stick">http://doc.ubuntu-fr.org/pctv_usb_stick</a></li>
-</ul>
-<p>Grâce à cette procédure, il m'a fallu moins de 10 minutes pour que le stick soit reconnu. Pas besoin de prendre les pilotes expérimentaux, cela marche très bien avec les pilotes définitifs.</p>
-<p>Remarque : Il faut quand même savoir que le pilote ainsi obtenu n'est pas aussi optimisé que celui de Pinnacle et en cas de mauvaise réception ou de parasitage sur votre ligne d'antenne, la recherche des chaînes peut rester vaine sous Linux alors que le stick marche bien sous windows. Il faut alors trouver un moyen d'améliorer la qualité du signal reçu (ampli, connecteurs blindés,...)</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -35,9 +36,57 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Debconf, dpkg-reconfigure et modification manuelle des fichiers de configuration</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2006-09-14T00:18:00+02:00" pubdate>
+                    le jeu. 14 septembre 2006
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
+                <a class="link-item" href="/tag/x.html">X</a></li>
+                <a class="link-item" href="/tag/debconf.html">debconf</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Sous Debian, la mise à jour du fichier de configuration du serveur X peut se faire automatiquement via debconf. De même sa modification est très simple grace à dpkg-reconfigure. Cependant, si pour une raison ou pour une autre il est modifié manuellement tout cela ne marche plus.</p>
+<p>On trouve cependant, dans l'en-tête de ce même fichier, la procédure à suivre pour pallier ce problème :</p>
+<ul>
+<li>
+<p><strong>XFree86</strong> :<br>
+cp /etc/X11/XF86Config-4 /etc/X11/XF86Config-4.custom<br>
+md5sum etc/X11/XF86Config-4 > /var/lib/xfree86/XF86Config-4.md5sum<br>
+dpkg-reconfigure xserver-xfree86\"  </p>
+</li>
+<li>
+<p><strong>Xorg</strong> :<br>
+dpkg-reconfigure -phigh xserver-xorg</p>
+</li>
+</ul>
+<p>Tout cela avec les droits root bien sur.</p>
+<ul>
+<li><strong>Questions</strong> :<br>
+Dans le cas d'xfree86, si on utilise dpkg-reconfigure -phigh xserver-xfree86 ça marche aussi ?<br>
+De même avec xorg si on utilise md5sum ?</li>
+</ul>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -90,53 +139,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Debconf, dpkg-reconfigure et modification manuelle des fichiers de configuration</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2006-09-14T00:18:00+02:00" pubdate>
-                    le jeu. 14 septembre 2006
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
-                <a class="link-item" href="/tag/x.html">X</a></li>
-                <a class="link-item" href="/tag/debconf.html">debconf</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Sous Debian, la mise à jour du fichier de configuration du serveur X peut se faire automatiquement via debconf. De même sa modification est très simple grace à dpkg-reconfigure. Cependant, si pour une raison ou pour une autre il est modifié manuellement tout cela ne marche plus.</p>
-<p>On trouve cependant, dans l'en-tête de ce même fichier, la procédure à suivre pour pallier ce problème :</p>
-<ul>
-<li>
-<p><strong>XFree86</strong> :<br>
-cp /etc/X11/XF86Config-4 /etc/X11/XF86Config-4.custom<br>
-md5sum etc/X11/XF86Config-4 > /var/lib/xfree86/XF86Config-4.md5sum<br>
-dpkg-reconfigure xserver-xfree86\"  </p>
-</li>
-<li>
-<p><strong>Xorg</strong> :<br>
-dpkg-reconfigure -phigh xserver-xorg</p>
-</li>
-</ul>
-<p>Tout cela avec les droits root bien sur.</p>
-<ul>
-<li><strong>Questions</strong> :<br>
-Dans le cas d'xfree86, si on utilise dpkg-reconfigure -phigh xserver-xfree86 ça marche aussi ?<br>
-De même avec xorg si on utilise md5sum ?</li>
-</ul>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

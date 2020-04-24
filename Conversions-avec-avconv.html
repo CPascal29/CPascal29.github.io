@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -35,9 +36,40 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Conversions avec avconv</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2014-05-11T21:44:00+02:00" pubdate>
+                    le dim. 11 mai 2014
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/conversion.html">conversion</a></li>
+                <a class="link-item" href="/tag/audio.html">audio</a></li>
+                <a class="link-item" href="/tag/avconv.html">avconv</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Un petit script pour convertir des fichiers audio par paquets avec avconv sous linux :</p>
+<div class="highlight"><pre><span></span><code>*ls -1 | grep wma | awk -F. &#39;{print $1}&#39; | while read entree\rdo\ravconv -i <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.wma -b 192k <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.mp3\rdone\r*
+</code></pre></div>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -90,36 +122,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Conversions avec avconv</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2014-05-11T21:44:00+02:00" pubdate>
-                    le dim. 11 mai 2014
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/conversion.html">conversion</a></li>
-                <a class="link-item" href="/tag/audio.html">audio</a></li>
-                <a class="link-item" href="/tag/avconv.html">avconv</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Un petit script pour convertir des fichiers audio par paquets avec avconv sous linux :</p>
-<div class="highlight"><pre><span></span><code>*ls -1 | grep wma | awk -F. &#39;{print $1}&#39; | while read entree\rdo\ravconv -i <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.wma -b 192k <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.mp3\rdone\r*
-</code></pre></div>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

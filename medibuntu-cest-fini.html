@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -38,9 +39,52 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Medibuntu, c'est fini</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2014-05-11T21:31:00+02:00" pubdate>
+                    le dim. 11 mai 2014
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/medibuntu.html">Medibuntu</a></li>
+                <a class="link-item" href="/tag/depot.html">dépôt</a></li>
+                <a class="link-item" href="/tag/libdvdcss2.html">libdvdcss2</a></li>
+                <a class="link-item" href="/tag/libdvdcss2.html">Libdvdcss2</a></li>
+                <a class="link-item" href="/tag/codec.html">codec</a></li>
+                <a class="link-item" href="/tag/vlc.html">vlc</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Adieu Medibuntu, le dépôt est fermé. La plupart des logiciels et codecs fournis sont aujourd'hui disponibles dans les dépôts officiels. Seule exception, Libdvdcss2, accessible dorénavant dans le dépôt vlc.</p>
+<p>Pour faire court, l'adresse de ce dernier est :</p>
+<ul>
+<li><em>deb http://download.videolan.org/pub/debian/stable</em></li>
+</ul>
+<p>et pour obtenir le certificat :</p>
+<ul>
+<li><em>sudo bash<br>
+   wget -O - http://download.videolan.org/pub/debian/videolan-apt.asc | sudo apt-key add -</em></li>
+</ul>
+<p>Remarque :<br>
+le sudo bash peut paraître surprenant car le wget qui suit devrait se suffire à lui même mais dans ce cas précis, cela ne marche pas si on ne le fait pas.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -93,48 +137,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Medibuntu, c'est fini</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2014-05-11T21:31:00+02:00" pubdate>
-                    le dim. 11 mai 2014
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/medibuntu.html">Medibuntu</a></li>
-                <a class="link-item" href="/tag/depot.html">dépôt</a></li>
-                <a class="link-item" href="/tag/libdvdcss2.html">libdvdcss2</a></li>
-                <a class="link-item" href="/tag/libdvdcss2.html">Libdvdcss2</a></li>
-                <a class="link-item" href="/tag/codec.html">codec</a></li>
-                <a class="link-item" href="/tag/vlc.html">vlc</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Adieu Medibuntu, le dépôt est fermé. La plupart des logiciels et codecs fournis sont aujourd'hui disponibles dans les dépôts officiels. Seule exception, Libdvdcss2, accessible dorénavant dans le dépôt vlc.</p>
-<p>Pour faire court, l'adresse de ce dernier est :</p>
-<ul>
-<li><em>deb http://download.videolan.org/pub/debian/stable</em></li>
-</ul>
-<p>et pour obtenir le certificat :</p>
-<ul>
-<li><em>sudo bash<br>
-   wget -O - http://download.videolan.org/pub/debian/videolan-apt.asc | sudo apt-key add -</em></li>
-</ul>
-<p>Remarque :<br>
-le sudo bash peut paraître surprenant car le wget qui suit devrait se suffire à lui même mais dans ce cas précis, cela ne marche pas si on ne le fait pas.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

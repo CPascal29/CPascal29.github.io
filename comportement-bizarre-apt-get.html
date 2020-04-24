@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -36,9 +37,41 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Comportement bizarre d'apt-get</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2005-11-23T00:52:00+01:00" pubdate>
+                    le mer. 23 novembre 2005
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/sarge.html">Sarge</a></li>
+                <a class="link-item" href="/tag/testing.html">testing</a></li>
+                <a class="link-item" href="/tag/bug.html">bug</a></li>
+                <a class="link-item" href="/tag/apt.html">apt</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Après le passage de "Sarge" en version stable je suis resté en testing. Du coup, il y a quelques temps j'ai installé apt-listbugs. Ce dernier n'a pas tardé à m'afficher, à chaque mise à jour, une liste de bugs concernant certains des nouveaux paquets. Paquets que je mettais donc de côté sauf quand le bug ne me paraissait pas très critique. C'est comme ça que j'ai un peu rapidement refusé la mise à jour de la libc6. Cela a entraîné quelques menus problèmes par la suite et je suis revenu en arrière. Actuellement j'ai même désinstallé apt-listbugs.</p>
+<p>Il me reste cependant un problème, lié ou pas à cette péripétie je n'en sais trop rien. En effet alors que, sous windows, ou sous linux avec firefox, les téléchargements se déroulent sans problème, ils deviennent très cahotiques lorsque je fais des mises à jour avec apt-get. Le débit chute régulièrement à des valeurs ridicules (de l'ordre du B/s et non plus du kB/s) voire s'annule complètement avant de remonter au bout d'un temps plus ou moins long.</p>
+<p>Jusqu'à maintenant mes recherches ne m'ont pas permis d'en trouver la cause ni d'y remédier. Si quelqu'un a une solution, je suis preneur, vous pouvez poster un petit commentaire à cet article. Ceci dit ne vous étonnez pas si je ne répond pas tout de suite, je vais être absent quelques semaines. A suivre donc.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -91,37 +124,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Comportement bizarre d'apt-get</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2005-11-23T00:52:00+01:00" pubdate>
-                    le mer. 23 novembre 2005
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/sarge.html">Sarge</a></li>
-                <a class="link-item" href="/tag/testing.html">testing</a></li>
-                <a class="link-item" href="/tag/bug.html">bug</a></li>
-                <a class="link-item" href="/tag/apt.html">apt</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Après le passage de "Sarge" en version stable je suis resté en testing. Du coup, il y a quelques temps j'ai installé apt-listbugs. Ce dernier n'a pas tardé à m'afficher, à chaque mise à jour, une liste de bugs concernant certains des nouveaux paquets. Paquets que je mettais donc de côté sauf quand le bug ne me paraissait pas très critique. C'est comme ça que j'ai un peu rapidement refusé la mise à jour de la libc6. Cela a entraîné quelques menus problèmes par la suite et je suis revenu en arrière. Actuellement j'ai même désinstallé apt-listbugs.</p>
-<p>Il me reste cependant un problème, lié ou pas à cette péripétie je n'en sais trop rien. En effet alors que, sous windows, ou sous linux avec firefox, les téléchargements se déroulent sans problème, ils deviennent très cahotiques lorsque je fais des mises à jour avec apt-get. Le débit chute régulièrement à des valeurs ridicules (de l'ordre du B/s et non plus du kB/s) voire s'annule complètement avant de remonter au bout d'un temps plus ou moins long.</p>
-<p>Jusqu'à maintenant mes recherches ne m'ont pas permis d'en trouver la cause ni d'y remédier. Si quelqu'un a une solution, je suis preneur, vous pouvez poster un petit commentaire à cet article. Ceci dit ne vous étonnez pas si je ne répond pas tout de suite, je vais être absent quelques semaines. A suivre donc.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

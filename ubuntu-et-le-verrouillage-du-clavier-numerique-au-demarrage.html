@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -37,9 +38,47 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Ubuntu et le verrouillage du clavier numérique au démarrage</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2019-11-23T22:19:00+01:00" pubdate>
+                    le sam. 23 novembre 2019
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/ubuntu.html">Ubuntu</a></li>
+                <a class="link-item" href="/tag/demarrage.html">démarrage</a></li>
+                <a class="link-item" href="/tag/numlock.html">numlock</a></li>
+                <a class="link-item" href="/tag/verrouillage.html">verrouillage</a></li>
+                <a class="link-item" href="/tag/clavier.html">clavier</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Un petit détail agaçant avec Ubuntu : au démarrage, lorsqu'on arrive à l'écran d'authentification, le clavier numérique n'est pas activé. Si on n'y pense pas et que le mot de passe contient des chiffres, cela peut amener quelques désagréments.</p>
+<p>Une solution pour y remédier passe par l'installation du paquet numlockx mais il y a plus simple. Dans un terminal, exécuter successivement les trois commandes suivantes :</p>
+<blockquote>
+<p>sudo -i</p>
+<p>su gdm -s /bin/bash</p>
+<p>gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'</p>
+</blockquote>
+<p>Merci à Lynn qui a donné cette solution sur le forum ubuntu-fr : <a href="https://forum.ubuntu-fr.org/viewtopic.php?id=2024787">https://forum.ubuntu-fr.org/viewtopic.php?id=2024787</a></p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -92,43 +131,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Ubuntu et le verrouillage du clavier numérique au démarrage</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2019-11-23T22:19:00+01:00" pubdate>
-                    le sam. 23 novembre 2019
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/ubuntu.html">Ubuntu</a></li>
-                <a class="link-item" href="/tag/demarrage.html">démarrage</a></li>
-                <a class="link-item" href="/tag/numlock.html">numlock</a></li>
-                <a class="link-item" href="/tag/verrouillage.html">verrouillage</a></li>
-                <a class="link-item" href="/tag/clavier.html">clavier</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Un petit détail agaçant avec Ubuntu : au démarrage, lorsqu'on arrive à l'écran d'authentification, le clavier numérique n'est pas activé. Si on n'y pense pas et que le mot de passe contient des chiffres, cela peut amener quelques désagréments.</p>
-<p>Une solution pour y remédier passe par l'installation du paquet numlockx mais il y a plus simple. Dans un terminal, exécuter successivement les trois commandes suivantes :</p>
-<blockquote>
-<p>sudo -i</p>
-<p>su gdm -s /bin/bash</p>
-<p>gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'</p>
-</blockquote>
-<p>Merci à Lynn qui a donné cette solution sur le forum ubuntu-fr : <a href="https://forum.ubuntu-fr.org/viewtopic.php?id=2024787">https://forum.ubuntu-fr.org/viewtopic.php?id=2024787</a></p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

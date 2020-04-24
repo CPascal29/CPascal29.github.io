@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -36,9 +37,45 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Hardy Heron : de bonnes surprises et une petite difficulté</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2008-08-18T23:00:00+02:00" pubdate>
+                    le lun. 18 août 2008
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/installation.html">installation</a></li>
+                <a class="link-item" href="/tag/kubuntu.html">Kubuntu</a></li>
+                <a class="link-item" href="/tag/hardy.html">Hardy</a></li>
+                <a class="link-item" href="/tag/heron.html">Heron</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Me voila donc avec une belle Kubuntu Hardy Heron.</p>
+<p>Cette fois-ci, j'avais commandé le cdrom chez Ubuntu via ship-it (en gros, trois semaines d'attente). L'installation (une vraie pas une mise à jour) s'est bien passée et un des derniers points d'achoppement qui restait encore s'est enfin évanoui. Ma clé wifi usb Ovislink (EVO W54USB) basée sur le chipset Ralink rt2570 est reconnue et fonctionne sans souci avec knetworkmanager. J'apprécie vraiment.</p>
+<p>Bon, encore une fois, mon stick USB Pinnacle PCTV TNT n'est pas reconnu par défaut mais l'installation de la version des pilotes v4l fournie par <strong>mcentral.de</strong> est toujours aussi simple et efficace.<br>
+Je reste quand même surpris qu'après plusieurs mises à jour, cette fonctionnalité ne soit pas intégrée par défaut dans le pilote v4l fournit par Ubuntu.</p>
+<p>Enfin, une petite difficulté, la seule, a concerné la lecture des DVD. Malgré l'installation de libdvdcss2 et des quelques autres paquets que j'installe et qui suffisent habituellement, impossible de lire un DVD. Cela touchait aussi bien les DVD du commerce que les films persos mis au format DVD par manDVD. Echec sur toute la ligne que ce soit avec mplayer, vlc ou kaffeine. Kaffeine qui m'affichait un message demandant l'installation de libdvdcss2 pourtant présent.<br>
+J'ai passé un petit moment à essayer pleins de choses ce qui s'est notamment traduit par l'installation des paquets "kubuntu-restricted-extras" et "w32codecs" sans résultat. Après recherche dans les incontournables forums Ubuntu, il faut désinstaller la version de libdvdcss2 fournie par médibuntu et installer celle fournie par kaffeine (sudo /usr/share/doc/kaffeine/install-css.sh). Seul problème après ça, si on garde le dépot médibuntu et si on ne bidouille pas son source.list, l'utilitaire de mise à jour veut systématiquement nous faire réinstaller la version de libdvdcss2 qui pose problème.</p>
+<p>Au bilan, je reste très satisfait de ce brave Hardy Heron et je vais probablement le garder un bon bout de temps.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -91,41 +128,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Hardy Heron : de bonnes surprises et une petite difficulté</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2008-08-18T23:00:00+02:00" pubdate>
-                    le lun. 18 août 2008
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/installation.html">installation</a></li>
-                <a class="link-item" href="/tag/kubuntu.html">Kubuntu</a></li>
-                <a class="link-item" href="/tag/hardy.html">Hardy</a></li>
-                <a class="link-item" href="/tag/heron.html">Heron</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Me voila donc avec une belle Kubuntu Hardy Heron.</p>
-<p>Cette fois-ci, j'avais commandé le cdrom chez Ubuntu via ship-it (en gros, trois semaines d'attente). L'installation (une vraie pas une mise à jour) s'est bien passée et un des derniers points d'achoppement qui restait encore s'est enfin évanoui. Ma clé wifi usb Ovislink (EVO W54USB) basée sur le chipset Ralink rt2570 est reconnue et fonctionne sans souci avec knetworkmanager. J'apprécie vraiment.</p>
-<p>Bon, encore une fois, mon stick USB Pinnacle PCTV TNT n'est pas reconnu par défaut mais l'installation de la version des pilotes v4l fournie par <strong>mcentral.de</strong> est toujours aussi simple et efficace.<br>
-Je reste quand même surpris qu'après plusieurs mises à jour, cette fonctionnalité ne soit pas intégrée par défaut dans le pilote v4l fournit par Ubuntu.</p>
-<p>Enfin, une petite difficulté, la seule, a concerné la lecture des DVD. Malgré l'installation de libdvdcss2 et des quelques autres paquets que j'installe et qui suffisent habituellement, impossible de lire un DVD. Cela touchait aussi bien les DVD du commerce que les films persos mis au format DVD par manDVD. Echec sur toute la ligne que ce soit avec mplayer, vlc ou kaffeine. Kaffeine qui m'affichait un message demandant l'installation de libdvdcss2 pourtant présent.<br>
-J'ai passé un petit moment à essayer pleins de choses ce qui s'est notamment traduit par l'installation des paquets "kubuntu-restricted-extras" et "w32codecs" sans résultat. Après recherche dans les incontournables forums Ubuntu, il faut désinstaller la version de libdvdcss2 fournie par médibuntu et installer celle fournie par kaffeine (sudo /usr/share/doc/kaffeine/install-css.sh). Seul problème après ça, si on garde le dépot médibuntu et si on ne bidouille pas son source.list, l'utilitaire de mise à jour veut systématiquement nous faire réinstaller la version de libdvdcss2 qui pose problème.</p>
-<p>Au bilan, je reste très satisfait de ce brave Hardy Heron et je vais probablement le garder un bon bout de temps.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

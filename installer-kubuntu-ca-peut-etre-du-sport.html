@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -36,9 +37,48 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Installer Kubuntu, ça peut être du sport !</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2006-12-06T23:22:00+01:00" pubdate>
+                    le mer. 06 décembre 2006
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/installation.html">Installation</a></li>
+                <a class="link-item" href="/tag/bilan.html">bilan</a></li>
+                <a class="link-item" href="/tag/difficultees.html">difficultées</a></li>
+                <a class="link-item" href="/tag/kubuntu.html">Kubuntu</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Suite à mes ennuis de disque dur, j'ai donc été amené à réinstaller Linux et j'en ai profité pour essayer une Kubuntu, la 6.06 (Dapper Drake) d'abord puis la 6.10 (Edgy Eft). En ce qui concerne la première, aucun soucis d'installation, rien de particulier à signaler. Pour la Edgy par contre j'ai rencontré plus de difficultés.</p>
+<p>Petit rappel chronologique d'abord. Le disque dur d'origine rend l'âme, je passe sur l'épisode du retour en magasin décrit dans un autre billet, mise en place provisoire d'un disque dur de 4 Go, installation de Dapper Drake, mise à jour vers Edgy Eft, mise en place d'un nouveau disque dur de 80 Go, tentatives infructueuses d'installation de Edgy Eft, installation de Dapper Drake et pour finir mise à jour vers Edgy Eft.</p>
+<p>Lors de la première mise à jour vers Edgy j'ai utilisé apt-get plutôt qu' adept_updater (l'outil graphique de la kubuntu). Le seul problème est survenu au redémarrage, la session graphique ne voulant pas se lancer. Apparemment, il restait dans /var/run un pid "fantôme" de kdm. Il n'y avait peut être pas que ça car j'ai bidouillé dans tous les sens avant de supprimer le pid en cause et je ne me souviens pas de tout. Ceci fait, plus de soucis, une belle Edgy Eft fonctionnelle.</p>
+<p>Après mise en place de mon nouveau disque dur, j'ai essayé d'installer directement la dernière version de kubuntu. Problème, avec un lecteur/graveur de DVD agonisant c'est moins facile. Impossible d'utiliser un DVD, seul les CD passent plus ou moins bien. J'ai téléchargé une iso que j'ai gravée deux fois de suite avec des graveurs différents mais aucun des CD obtenus n'a permis l'installation.<br>
+Au passage mon matériel n'était pas forcément seul en cause, quelques discussions avec des linuxiens avertis (prez, tdj, si vous m'écoutez...;-)) m'ont permis d'apprendre que l'installation de Edgy Eft était peut être un peu buggée.<br>
+Pour finir, j'ai installé une Dapper et j'ai refait une mise à jour.</p>
+<p>Mise à jour donc pour laquelle j'ai essayé cette fois ci adept_updater. Pas un succès. La quasi totalité de la mise à jour se passe bien mais elle s'interrompt finalement sur des erreurs de dépendances. Arrivé là un bon conseil, n'essayez pas de redémarrer, c'est une très mauvaise idée (qu'est ce qui m'a pris je ne sais pas, une absence...). Bon, on repart à zéro et à nouveau le même problème avec adept. Cette fois-ci je suis repassé en console pour lancer un petit "apt-get -f install" qui a apparemment réglé les problèmes. Je dis apparemment car avec le recul je pense que j'aurais du relancer un apt-get dist-upgrade dans la foulée.<br>
+En effet après redémarrage, je me retrouve comme lors de la toute première mise à jour en mode console. Cette fois ci, la raison semble différente et je m'aperçois après quelques recherches que le paquet xserver-xorg n'est pas installé. Finalement kde veut bien se lancer et le plus dur est fait. Ouf, il aura fallu quelques sueurs quand même.</p>
+<p>Finalement, un bon conseil si vous voulez changer de version kubuntu (ubuntu en général), passez directement par apt, c'est aussi simple et plus sur même si par la suite pour installer de nouveaux paquets ou faire les mises à jour d'entretien, les différents outils adept (installer, manager et updater) sont très pratiques et agréables.</p>
+<p>Par la suite, il me restait à personnaliser un peu ma kubuntu mais ça, j'y reviendrai bientôt.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -91,44 +131,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Installer Kubuntu, ça peut être du sport !</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2006-12-06T23:22:00+01:00" pubdate>
-                    le mer. 06 décembre 2006
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/installation.html">Installation</a></li>
-                <a class="link-item" href="/tag/bilan.html">bilan</a></li>
-                <a class="link-item" href="/tag/difficultees.html">difficultées</a></li>
-                <a class="link-item" href="/tag/kubuntu.html">Kubuntu</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Suite à mes ennuis de disque dur, j'ai donc été amené à réinstaller Linux et j'en ai profité pour essayer une Kubuntu, la 6.06 (Dapper Drake) d'abord puis la 6.10 (Edgy Eft). En ce qui concerne la première, aucun soucis d'installation, rien de particulier à signaler. Pour la Edgy par contre j'ai rencontré plus de difficultés.</p>
-<p>Petit rappel chronologique d'abord. Le disque dur d'origine rend l'âme, je passe sur l'épisode du retour en magasin décrit dans un autre billet, mise en place provisoire d'un disque dur de 4 Go, installation de Dapper Drake, mise à jour vers Edgy Eft, mise en place d'un nouveau disque dur de 80 Go, tentatives infructueuses d'installation de Edgy Eft, installation de Dapper Drake et pour finir mise à jour vers Edgy Eft.</p>
-<p>Lors de la première mise à jour vers Edgy j'ai utilisé apt-get plutôt qu' adept_updater (l'outil graphique de la kubuntu). Le seul problème est survenu au redémarrage, la session graphique ne voulant pas se lancer. Apparemment, il restait dans /var/run un pid "fantôme" de kdm. Il n'y avait peut être pas que ça car j'ai bidouillé dans tous les sens avant de supprimer le pid en cause et je ne me souviens pas de tout. Ceci fait, plus de soucis, une belle Edgy Eft fonctionnelle.</p>
-<p>Après mise en place de mon nouveau disque dur, j'ai essayé d'installer directement la dernière version de kubuntu. Problème, avec un lecteur/graveur de DVD agonisant c'est moins facile. Impossible d'utiliser un DVD, seul les CD passent plus ou moins bien. J'ai téléchargé une iso que j'ai gravée deux fois de suite avec des graveurs différents mais aucun des CD obtenus n'a permis l'installation.<br>
-Au passage mon matériel n'était pas forcément seul en cause, quelques discussions avec des linuxiens avertis (prez, tdj, si vous m'écoutez...;-)) m'ont permis d'apprendre que l'installation de Edgy Eft était peut être un peu buggée.<br>
-Pour finir, j'ai installé une Dapper et j'ai refait une mise à jour.</p>
-<p>Mise à jour donc pour laquelle j'ai essayé cette fois ci adept_updater. Pas un succès. La quasi totalité de la mise à jour se passe bien mais elle s'interrompt finalement sur des erreurs de dépendances. Arrivé là un bon conseil, n'essayez pas de redémarrer, c'est une très mauvaise idée (qu'est ce qui m'a pris je ne sais pas, une absence...). Bon, on repart à zéro et à nouveau le même problème avec adept. Cette fois-ci je suis repassé en console pour lancer un petit "apt-get -f install" qui a apparemment réglé les problèmes. Je dis apparemment car avec le recul je pense que j'aurais du relancer un apt-get dist-upgrade dans la foulée.<br>
-En effet après redémarrage, je me retrouve comme lors de la toute première mise à jour en mode console. Cette fois ci, la raison semble différente et je m'aperçois après quelques recherches que le paquet xserver-xorg n'est pas installé. Finalement kde veut bien se lancer et le plus dur est fait. Ouf, il aura fallu quelques sueurs quand même.</p>
-<p>Finalement, un bon conseil si vous voulez changer de version kubuntu (ubuntu en général), passez directement par apt, c'est aussi simple et plus sur même si par la suite pour installer de nouveaux paquets ou faire les mises à jour d'entretien, les différents outils adept (installer, manager et updater) sont très pratiques et agréables.</p>
-<p>Par la suite, il me restait à personnaliser un peu ma kubuntu mais ça, j'y reviendrai bientôt.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -35,9 +36,44 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Libdvdcss2, le retour</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2019-11-23T21:30:00+01:00" pubdate>
+                    le sam. 23 novembre 2019
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/ubuntu.html">Ubuntu</a></li>
+                <a class="link-item" href="/tag/dvd.html">dvd</a></li>
+                <a class="link-item" href="/tag/libdvdcss2.html">libdvdcss2</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Pour mémoire, libdvdcss2 est une librairie nécessaire sous Linux pour lire les DVD du commerce. Elle est légale et autorisée en France mais pas dans tous les pays d'où le fait qu'elle n'est pas installée par défaut dans les distributions.</p>
+<p>Plusieurs possibilités pour l'installer, notamment via le dépôt VideoLAN mais la plus simple est la suivante :</p>
+<blockquote>
+<p>Installer le paquet libdvd-pkg via la logithèque, synaptic ou en tapant dans un terminal : <em>sudo apt install libdvd-pkg</em></p>
+<p>exécuter dans un terminal : <em>sudo dpkg-reconfigure libdvd-pkg</em></p>
+</blockquote>
+<p>Pour plus de détails : <a href="https://doc.ubuntu-fr.org/lire_un_dvd">https://doc.ubuntu-fr.org/lire_un_dvd</a></p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -90,40 +126,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Libdvdcss2, le retour</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2019-11-23T21:30:00+01:00" pubdate>
-                    le sam. 23 novembre 2019
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/ubuntu.html">Ubuntu</a></li>
-                <a class="link-item" href="/tag/dvd.html">dvd</a></li>
-                <a class="link-item" href="/tag/libdvdcss2.html">libdvdcss2</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Pour mémoire, libdvdcss2 est une librairie nécessaire sous Linux pour lire les DVD du commerce. Elle est légale et autorisée en France mais pas dans tous les pays d'où le fait qu'elle n'est pas installée par défaut dans les distributions.</p>
-<p>Plusieurs possibilités pour l'installer, notamment via le dépôt VideoLAN mais la plus simple est la suivante :</p>
-<blockquote>
-<p>Installer le paquet libdvd-pkg via la logithèque, synaptic ou en tapant dans un terminal : <em>sudo apt install libdvd-pkg</em></p>
-<p>exécuter dans un terminal : <em>sudo dpkg-reconfigure libdvd-pkg</em></p>
-</blockquote>
-<p>Pour plus de détails : <a href="https://doc.ubuntu-fr.org/lire_un_dvd">https://doc.ubuntu-fr.org/lire_un_dvd</a></p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

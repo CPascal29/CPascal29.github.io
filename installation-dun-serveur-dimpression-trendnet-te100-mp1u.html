@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -36,9 +37,45 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Installation d'un serveur d'impression Trendnet TE100-MP1U</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2009-05-03T22:20:00+02:00" pubdate>
+                    le dim. 03 mai 2009
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/impression.html">impression</a></li>
+                <a class="link-item" href="/tag/serveur.html">serveur</a></li>
+                <a class="link-item" href="/tag/trendnet.html">Trendnet</a></li>
+                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>En l'occurrence installation est un bien grand mot vu le peu de chose à faire.</p>
+<p>D'abord petit rappel, mon réseau est constitué d'une machine sous linux (la mienne, kubuntu 8.04) et de trois machines sous windows XP, le tout relié par des adaptateurs CPL et une Freebox V4 en mode routeur. Attribution automatique des adresses IP par la Freebox. L'imprimante reliée au serveur est une HP Deskjet 5550.</p>
+<p>Une fois l'imprimante reliée au serveur d'impression via le cable USB et le serveur relié au réseau via un adaptateur CPL, le plus dur est fait.<br>
+La connexion au serveur d'impression se fait par l'intermédiaire du navigateur en pointant sur l'adresse IP que lui a attribué la freebox (en ce qui me concerne je l'avais obtenue dans l'utilitaire de configuration fourni par Trendnet pour windows XP lors de l'installation sur une des autres machines). Le serveur est réglé par défaut pour une attribution automatique de l'adresse IP par DHCP, donc rien à faire. Je n'ai pas touché aux réglages par défaut pour l'instant, juste personnalisé l'identifiant et le mot de passe d'administration.</p>
+<p>Ayant pu vérifier que tout marchait bien et que le serveur d'impression était reconnu, il m'a suffit de me connecter au serveur CUPS (http://localhost:631), de choisir d'installer une nouvelle imprimante et de suivre la procédure, l'imprimante apparaissant dans le menu matériel lors de la deuxième étape et les pilotes proposés par défaut étant les bons.</p>
+<p>Au bilan, il aura fallu moins de cinq minutes pour avoir une imprimante "réseau" disponible et tout marche très bien.</p>
+<p>NB : je ne m'étendrai pas ici sur l'installation sous windows XP qui a été beaucoup plus fastidieuse et a nécessité de télécharger sur le site de Trendnet une version plus récente de l'exécutable contenant pilote et utilitaire de configuration. Pour info, je n'ai pas réussi à installer l'imprimante via le panneau de configuration (ajout imprimante, imprimante réseau, etc ...) et il m'a fallu passer par l'utilitaire Trendnet d'où un programme supplémentaire en tâche de fond histoire d'alourdir un peu plus le fonctionnement de windows qui n'en avait pas besoin.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -91,41 +128,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Installation d'un serveur d'impression Trendnet TE100-MP1U</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2009-05-03T22:20:00+02:00" pubdate>
-                    le dim. 03 mai 2009
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/impression.html">impression</a></li>
-                <a class="link-item" href="/tag/serveur.html">serveur</a></li>
-                <a class="link-item" href="/tag/trendnet.html">Trendnet</a></li>
-                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>En l'occurrence installation est un bien grand mot vu le peu de chose à faire.</p>
-<p>D'abord petit rappel, mon réseau est constitué d'une machine sous linux (la mienne, kubuntu 8.04) et de trois machines sous windows XP, le tout relié par des adaptateurs CPL et une Freebox V4 en mode routeur. Attribution automatique des adresses IP par la Freebox. L'imprimante reliée au serveur est une HP Deskjet 5550.</p>
-<p>Une fois l'imprimante reliée au serveur d'impression via le cable USB et le serveur relié au réseau via un adaptateur CPL, le plus dur est fait.<br>
-La connexion au serveur d'impression se fait par l'intermédiaire du navigateur en pointant sur l'adresse IP que lui a attribué la freebox (en ce qui me concerne je l'avais obtenue dans l'utilitaire de configuration fourni par Trendnet pour windows XP lors de l'installation sur une des autres machines). Le serveur est réglé par défaut pour une attribution automatique de l'adresse IP par DHCP, donc rien à faire. Je n'ai pas touché aux réglages par défaut pour l'instant, juste personnalisé l'identifiant et le mot de passe d'administration.</p>
-<p>Ayant pu vérifier que tout marchait bien et que le serveur d'impression était reconnu, il m'a suffit de me connecter au serveur CUPS (http://localhost:631), de choisir d'installer une nouvelle imprimante et de suivre la procédure, l'imprimante apparaissant dans le menu matériel lors de la deuxième étape et les pilotes proposés par défaut étant les bons.</p>
-<p>Au bilan, il aura fallu moins de cinq minutes pour avoir une imprimante "réseau" disponible et tout marche très bien.</p>
-<p>NB : je ne m'étendrai pas ici sur l'installation sous windows XP qui a été beaucoup plus fastidieuse et a nécessité de télécharger sur le site de Trendnet une version plus récente de l'exécutable contenant pilote et utilitaire de configuration. Pour info, je n'ai pas réussi à installer l'imprimante via le panneau de configuration (ajout imprimante, imprimante réseau, etc ...) et il m'a fallu passer par l'utilitaire Trendnet d'où un programme supplémentaire en tâche de fond histoire d'alourdir un peu plus le fonctionnement de windows qui n'en avait pas besoin.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

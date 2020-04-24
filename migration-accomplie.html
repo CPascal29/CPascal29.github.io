@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -35,9 +36,53 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Migration accomplie</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2009-08-21T20:51:00+02:00" pubdate>
+                    le ven. 21 août 2009
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/migration.html">migration</a></li>
+                <a class="link-item" href="/tag/dotclear.html">Dotclear</a></li>
+                <a class="link-item" href="/tag/free.html">Free</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Après quelques tentatives inabouties, j'ai finalement effectué la migration de la version 1.2.8 vers la version 2.1.5 de <a href="http://fr.dotclear.org">Dotclear</a>.</p>
+<p>En fait, le plus compliqué a été de repersonnaliser le blog vu qu'il y a incompatibilité entre les thèmes des deux versions. <a href="http://themes.dotaddict.org">DotAddict</a> m'a été d'un grand secours et une fois que j'ai eu trouvé quelque chose qui se rapprochait de mes préférences, un peu de bidouillage dans les fichiers de style via l'éditeur de thème a fait le reste.</p>
+<p>Pour la suite, mes choix ont été dictés par les restrictions liées à l'hébergement pages personnelles de <a href="http://portail.free.fr">Free</a> :</p>
+<ul>
+<li>
+<p>la récupération des données a été effectuée (très simplement) via le plugin flatexport;</p>
+</li>
+<li>
+<p>l'activation de php5 est nécessaire et se fait via la création d'un fichier texte contenant juste php 1 enregistré à la racine du blog sous l'appellation .htaccess;</p>
+</li>
+<li>
+<p>il faut activer la base postgreSQL proposée par Free. Dotclear 2 ne fonctionne pas avec la version disponible de mySQL. Cela ne pose aucun problème pratique si la base mySQL est déjà activée car Free autorise la cohabitation des deux;</p>
+</li>
+<li>le plugin fortune n'étant pas supporté par Dotclear 2, j'ai utilisé <a href="https://plugins.dotaddict.org/dc2/details/bashfrquote">BashFR Quote</a> pour les citations.</li>
+</ul>
+<p>Et voila, le résultat est là.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -90,49 +135,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Migration accomplie</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2009-08-21T20:51:00+02:00" pubdate>
-                    le ven. 21 août 2009
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/migration.html">migration</a></li>
-                <a class="link-item" href="/tag/dotclear.html">Dotclear</a></li>
-                <a class="link-item" href="/tag/free.html">Free</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Après quelques tentatives inabouties, j'ai finalement effectué la migration de la version 1.2.8 vers la version 2.1.5 de <a href="http://fr.dotclear.org">Dotclear</a>.</p>
-<p>En fait, le plus compliqué a été de repersonnaliser le blog vu qu'il y a incompatibilité entre les thèmes des deux versions. <a href="http://themes.dotaddict.org">DotAddict</a> m'a été d'un grand secours et une fois que j'ai eu trouvé quelque chose qui se rapprochait de mes préférences, un peu de bidouillage dans les fichiers de style via l'éditeur de thème a fait le reste.</p>
-<p>Pour la suite, mes choix ont été dictés par les restrictions liées à l'hébergement pages personnelles de <a href="http://portail.free.fr">Free</a> :</p>
-<ul>
-<li>
-<p>la récupération des données a été effectuée (très simplement) via le plugin flatexport;</p>
-</li>
-<li>
-<p>l'activation de php5 est nécessaire et se fait via la création d'un fichier texte contenant juste php 1 enregistré à la racine du blog sous l'appellation .htaccess;</p>
-</li>
-<li>
-<p>il faut activer la base postgreSQL proposée par Free. Dotclear 2 ne fonctionne pas avec la version disponible de mySQL. Cela ne pose aucun problème pratique si la base mySQL est déjà activée car Free autorise la cohabitation des deux;</p>
-</li>
-<li>le plugin fortune n'étant pas supporté par Dotclear 2, j'ai utilisé <a href="https://plugins.dotaddict.org/dc2/details/bashfrquote">BashFR Quote</a> pour les citations.</li>
-</ul>
-<p>Et voila, le résultat est là.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

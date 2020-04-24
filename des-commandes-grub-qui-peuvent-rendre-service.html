@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -38,9 +39,54 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Des commandes Grub qui peuvent rendre service...</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2015-10-31T14:16:00+01:00" pubdate>
+                    le sam. 31 octobre 2015
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/demarrage.html">démarrage</a></li>
+                <a class="link-item" href="/tag/boot.html">boot</a></li>
+                <a class="link-item" href="/tag/grub.html">Grub</a></li>
+                <a class="link-item" href="/tag/commandes.html">commandes</a></li>
+                <a class="link-item" href="/tag/windows.html">Windows</a></li>
+                <a class="link-item" href="/tag/linux.html">Linux</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>En cas de problème de démarrage, après une installation problématique en double boot Windows/Linux et bios UEFI par exemple, les commandes suivantes permettant de démarrer sur la distribution Linux nouvellement installée à partir d'un live-USB peuvent rendre service (merci à http://www.graoulug.org/wiki/wakka.php?wiki=GRUB) :</p>
+<p>vous devez d'abord indiquer à GRUB où se situe le noyau de ce système. Par exemple : (à personnaliser en fonction de votre partitionnement)</p>
+<ul>
+<li><em>kernel (hd0,0)/vmlinuz root=/dev/sda1 initrd (hd0,0)/initrd.img</em></li>
+</ul>
+<p>Maintenant, il ne vous reste plus qu'à provoquer le démarrage de GNU/Linux, en tapant :</p>
+<ul>
+<li><em>boot</em></li>
+</ul>
+<h2>Quelques explications :</h2>
+<p><em>hd0,0</em> : en langage GRUB cela veut dire première partition du premier disque dur (on compte à partir de 0 pour les disques et les partitions).</p>
+<p><em>sda1</em> : en langage LINUX cela signifie exactement la même chose (on compte a, b, c,... pour le disque et à partir de 1 pour la partition).</p>
+<p>Sur votre PC cela peut être un autre emplacement, il va donc falloir personnaliser la commande. Même si les deux formules veulent dire la même chose, elles ne sont pas interchangeables dans la commande.</p>
+<p>Les fichiers vmlinuz et initrd.img sont dans le répertoire /boot avec leur nom complet comprenant le numéro de version (ex : vmlinuz-3.13.0-65, initrd.img-3.13.0-65). Un raccourci est généralement présent à la racine sous la forme simplifiée vmlinuz, initrd.img ce qui est plus simple et plus rapide à utiliser.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -93,50 +139,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Des commandes Grub qui peuvent rendre service...</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2015-10-31T14:16:00+01:00" pubdate>
-                    le sam. 31 octobre 2015
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/demarrage.html">démarrage</a></li>
-                <a class="link-item" href="/tag/boot.html">boot</a></li>
-                <a class="link-item" href="/tag/grub.html">Grub</a></li>
-                <a class="link-item" href="/tag/commandes.html">commandes</a></li>
-                <a class="link-item" href="/tag/windows.html">Windows</a></li>
-                <a class="link-item" href="/tag/linux.html">Linux</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>En cas de problème de démarrage, après une installation problématique en double boot Windows/Linux et bios UEFI par exemple, les commandes suivantes permettant de démarrer sur la distribution Linux nouvellement installée à partir d'un live-USB peuvent rendre service (merci à http://www.graoulug.org/wiki/wakka.php?wiki=GRUB) :</p>
-<p>vous devez d'abord indiquer à GRUB où se situe le noyau de ce système. Par exemple : (à personnaliser en fonction de votre partitionnement)</p>
-<ul>
-<li><em>kernel (hd0,0)/vmlinuz root=/dev/sda1 initrd (hd0,0)/initrd.img</em></li>
-</ul>
-<p>Maintenant, il ne vous reste plus qu'à provoquer le démarrage de GNU/Linux, en tapant :</p>
-<ul>
-<li><em>boot</em></li>
-</ul>
-<h2>Quelques explications :</h2>
-<p><em>hd0,0</em> : en langage GRUB cela veut dire première partition du premier disque dur (on compte à partir de 0 pour les disques et les partitions).</p>
-<p><em>sda1</em> : en langage LINUX cela signifie exactement la même chose (on compte a, b, c,... pour le disque et à partir de 1 pour la partition).</p>
-<p>Sur votre PC cela peut être un autre emplacement, il va donc falloir personnaliser la commande. Même si les deux formules veulent dire la même chose, elles ne sont pas interchangeables dans la commande.</p>
-<p>Les fichiers vmlinuz et initrd.img sont dans le répertoire /boot avec leur nom complet comprenant le numéro de version (ex : vmlinuz-3.13.0-65, initrd.img-3.13.0-65). Un raccourci est généralement présent à la racine sous la forme simplifiée vmlinuz, initrd.img ce qui est plus simple et plus rapide à utiliser.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -35,9 +36,43 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Skype skype skype Hourra</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2005-08-15T16:08:00+02:00" pubdate>
+                    le lun. 15 août 2005
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/skype.html">skype</a></li>
+                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
+                <a class="link-item" href="/tag/linux.html">linux</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Lorsque j'ai acheté mon portable en décembre dernier, Skype était préinstallé avec une offre promotionnelle (190mn de communications vers les téléphones fixes).<br>
+Après avoir installé ma debian testing, je suis allé voir s'il y avait une version de skype pour linux. C'était le cas et j'ai donc téléchargé le tar.gz. Installation facile, pas de recompilation nécessaire, pas de dépendances, un binaire et quelques fichiers adjacents. Depuis, il y a même un paquet <em>deb</em> ce qui dans mon cas rend les choses encore plus faciles (c'est lui qui est en place maintenant).</p>
+<p>Ceci dit, sous kde il faut commencer par expliquer à skype qu'il doit passer au travers de artsdsp. C'est expliqué dans la doc (d'où l'utilité de toujours la lire, rtfm ;-)) et cela consiste en fait à lancer skype avec la commande suivante :<br>
+<em>rartsdsp -m skype</em></p>
+<p>En fait, les problèmes ont commencé quand j'ai voulu me servir du micro. En effet, je suis allé faire un essai sur le répondeur test de skype (echo123) et là, si j'entendais bien le message d'accueil, impossible d'enregistrer mon message, ma voix ne passait pas. J'ai galéré un moment à essayer de comprendre ce qui ne marchait pas. Finalement il a fallu que j'installe les pilotes sons alsa à la place du vieil oss de série pour débloquer la situation.</p>
+<p>Maintenant tout marche bien. Tout ? Non car un petit village ....:-) En fait il reste une petite contrariété. En effet si tout marche bien quand je suis en communication avec une personne, cela se gâte un peu en conférence à 3 ou plus. En effet dans cette situation, si j'entend bien tout ce que disent les autres, eux ne me reçoivent qu'avec un décalage de presque une minute. Ce qui n'est pas très pratique. Je ne désespère pas de trouver une solution mais en attendant je peux toujours répondre par le chat alors ce n'est pas si grave...</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -90,39 +125,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Skype skype skype Hourra</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2005-08-15T16:08:00+02:00" pubdate>
-                    le lun. 15 août 2005
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/skype.html">skype</a></li>
-                <a class="link-item" href="/tag/configuration.html">configuration</a></li>
-                <a class="link-item" href="/tag/linux.html">linux</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Lorsque j'ai acheté mon portable en décembre dernier, Skype était préinstallé avec une offre promotionnelle (190mn de communications vers les téléphones fixes).<br>
-Après avoir installé ma debian testing, je suis allé voir s'il y avait une version de skype pour linux. C'était le cas et j'ai donc téléchargé le tar.gz. Installation facile, pas de recompilation nécessaire, pas de dépendances, un binaire et quelques fichiers adjacents. Depuis, il y a même un paquet <em>deb</em> ce qui dans mon cas rend les choses encore plus faciles (c'est lui qui est en place maintenant).</p>
-<p>Ceci dit, sous kde il faut commencer par expliquer à skype qu'il doit passer au travers de artsdsp. C'est expliqué dans la doc (d'où l'utilité de toujours la lire, rtfm ;-)) et cela consiste en fait à lancer skype avec la commande suivante :<br>
-<em>rartsdsp -m skype</em></p>
-<p>En fait, les problèmes ont commencé quand j'ai voulu me servir du micro. En effet, je suis allé faire un essai sur le répondeur test de skype (echo123) et là, si j'entendais bien le message d'accueil, impossible d'enregistrer mon message, ma voix ne passait pas. J'ai galéré un moment à essayer de comprendre ce qui ne marchait pas. Finalement il a fallu que j'installe les pilotes sons alsa à la place du vieil oss de série pour débloquer la situation.</p>
-<p>Maintenant tout marche bien. Tout ? Non car un petit village ....:-) En fait il reste une petite contrariété. En effet si tout marche bien quand je suis en communication avec une personne, cela se gâte un peu en conférence à 3 ou plus. En effet dans cette situation, si j'entend bien tout ce que disent les autres, eux ne me reçoivent qu'avec un décalage de presque une minute. Ce qui n'est pas très pratique. Je ne désespère pas de trouver une solution mais en attendant je peux toujours répondre par le chat alors ce n'est pas si grave...</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

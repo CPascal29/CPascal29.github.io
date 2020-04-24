@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -37,9 +38,50 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Installation ou mise à jour ?</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2007-07-15T15:11:00+02:00" pubdate>
+                    le dim. 15 juillet 2007
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/mise-a-jour.html">mise à jour</a></li>
+                <a class="link-item" href="/tag/feisty.html">Feisty</a></li>
+                <a class="link-item" href="/tag/edgy.html">Edgy</a></li>
+                <a class="link-item" href="/tag/kubuntu.html">Kubuntu</a></li>
+                <a class="link-item" href="/tag/migration.html">migration</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>J'ai effectué, un peu après sa sortie, la migration de mon système vers Feisty Fawn (kubuntu 7.04). Je rappelle que j'utilisais Edgy Eft (kubuntu 6.10) déjà après une mise à jour depuis Dapper Drake (kubuntu 6.06). En effet, à l'époque je n'avais pas réussi à installer Edgy directement.<br>
+En guise de retour d'expérience, je ferais deux remarques :</p>
+<ul>
+<li>
+<p>Adept updater a bien détecté la nouvelle version et m'a proposé la mise à jour. Cependant, l'opération a planté un peu avant la fin probablement à cause d'une mauvaise gestion des dépendances. J'avais rencontré le même problème lors de ma migration précédente de Dapper vers Edgy quand j'avais essayé de passer par Adept Updater après avoir modifié le source.list.<br>
+Au bilan, le seul moyen fiable de s'en sortir reste apt-get update/apt-get dist-upgrade (après modification du source.list).</p>
+</li>
+<li>
+<p>j'ai noté depuis mon passage à Feisty quelques instabilités ou problèmes mineurs pas trop gênants (notamment avec power manager). Dans certains cas, j'ai pu en trouver l'origine après quelques recherches sur internet et y remédier (j'y reviendrai bientôt) mais pour le reste je pense que cela vient de mes deux mises à jour successives. Mettre à jour c'est bien mais une bonne installation propre de temps en temps reste à mon avis souhaitable. C'est ce que je ferai la prochaine fois que je changerai de version (après une bonne sauvegarde de mes données personnelles bien sur !)</p>
+</li>
+</ul>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -92,46 +134,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Installation ou mise à jour ?</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2007-07-15T15:11:00+02:00" pubdate>
-                    le dim. 15 juillet 2007
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/mise-a-jour.html">mise à jour</a></li>
-                <a class="link-item" href="/tag/feisty.html">Feisty</a></li>
-                <a class="link-item" href="/tag/edgy.html">Edgy</a></li>
-                <a class="link-item" href="/tag/kubuntu.html">Kubuntu</a></li>
-                <a class="link-item" href="/tag/migration.html">migration</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>J'ai effectué, un peu après sa sortie, la migration de mon système vers Feisty Fawn (kubuntu 7.04). Je rappelle que j'utilisais Edgy Eft (kubuntu 6.10) déjà après une mise à jour depuis Dapper Drake (kubuntu 6.06). En effet, à l'époque je n'avais pas réussi à installer Edgy directement.<br>
-En guise de retour d'expérience, je ferais deux remarques :</p>
-<ul>
-<li>
-<p>Adept updater a bien détecté la nouvelle version et m'a proposé la mise à jour. Cependant, l'opération a planté un peu avant la fin probablement à cause d'une mauvaise gestion des dépendances. J'avais rencontré le même problème lors de ma migration précédente de Dapper vers Edgy quand j'avais essayé de passer par Adept Updater après avoir modifié le source.list.<br>
-Au bilan, le seul moyen fiable de s'en sortir reste apt-get update/apt-get dist-upgrade (après modification du source.list).</p>
-</li>
-<li>
-<p>j'ai noté depuis mon passage à Feisty quelques instabilités ou problèmes mineurs pas trop gênants (notamment avec power manager). Dans certains cas, j'ai pu en trouver l'origine après quelques recherches sur internet et y remédier (j'y reviendrai bientôt) mais pour le reste je pense que cela vient de mes deux mises à jour successives. Mettre à jour c'est bien mais une bonne installation propre de temps en temps reste à mon avis souhaitable. C'est ce que je ferai la prochaine fois que je changerai de version (après une bonne sauvegarde de mes données personnelles bien sur !)</p>
-</li>
-</ul>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

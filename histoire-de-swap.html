@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -36,9 +37,43 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Histoire de swap</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2007-01-16T00:03:00+01:00" pubdate>
+                    le mar. 16 janvier 2007
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/uuid.html">UUID</a></li>
+                <a class="link-item" href="/tag/swap.html">swap</a></li>
+                <a class="link-item" href="/tag/echec.html">échec</a></li>
+                <a class="link-item" href="/tag/activation.html">activation</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Kubuntu (Ubuntu en général) n'est pas par défaut très bavarde au démarrage. C'est donc tout à fait par hasard, lors d'une vérification périodique du système de fichier, que j'ai constaté l'échec à l'activation de ma partition de swap. Je passe sur le temps qu'il m'a fallu pour comprendre ce qui avait pu se passer mais surtout corriger ce problème. Cela a été l'occasion de me trouver face à un truc bizarre et qui m'était inconnu : <strong>l'UUID</strong>. Ce bidule est certainement très utile mais la première chose qui m'est venu à l'esprit c'est quand même : pourquoi faire simple quand on peut faire compliqué...</p>
+<p>En résumé, s'il m'a fallu un certain temps pour trouver la solution, elle s'est avérée finalement assez simple. L'origine du problème venait à priori d'un essai de mise en hibernation foireux.<br>
+Pour récupérer la swap, il suffit de taper dans une console avec les droits root : <strong>mkswap /dev/hdax</strong> (avec ubuntu utilisez sudo, remplacez hdax par votre partition de swap). Outre le fait de recréer une partition swap toute neuve, cette commande va retourner un nouvel UUID qu'il faut mettre à la place de l'ancien dans le fichier /etc/fstab.<br>
+Au redémarrage suivant, on peut vérifier dans une console avec la commande "free" que la swap est de nouveau disponible.</p>
+<p>Pour en savoir plus sur l'UUID : <a href="http://doc.ubuntu-fr.org/uuid_et_label">http://doc.ubuntu-fr.org/uuid_et_label</a></p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -91,39 +126,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Histoire de swap</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2007-01-16T00:03:00+01:00" pubdate>
-                    le mar. 16 janvier 2007
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/uuid.html">UUID</a></li>
-                <a class="link-item" href="/tag/swap.html">swap</a></li>
-                <a class="link-item" href="/tag/echec.html">échec</a></li>
-                <a class="link-item" href="/tag/activation.html">activation</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Kubuntu (Ubuntu en général) n'est pas par défaut très bavarde au démarrage. C'est donc tout à fait par hasard, lors d'une vérification périodique du système de fichier, que j'ai constaté l'échec à l'activation de ma partition de swap. Je passe sur le temps qu'il m'a fallu pour comprendre ce qui avait pu se passer mais surtout corriger ce problème. Cela a été l'occasion de me trouver face à un truc bizarre et qui m'était inconnu : <strong>l'UUID</strong>. Ce bidule est certainement très utile mais la première chose qui m'est venu à l'esprit c'est quand même : pourquoi faire simple quand on peut faire compliqué...</p>
-<p>En résumé, s'il m'a fallu un certain temps pour trouver la solution, elle s'est avérée finalement assez simple. L'origine du problème venait à priori d'un essai de mise en hibernation foireux.<br>
-Pour récupérer la swap, il suffit de taper dans une console avec les droits root : <strong>mkswap /dev/hdax</strong> (avec ubuntu utilisez sudo, remplacez hdax par votre partition de swap). Outre le fait de recréer une partition swap toute neuve, cette commande va retourner un nouvel UUID qu'il faut mettre à la place de l'ancien dans le fichier /etc/fstab.<br>
-Au redémarrage suivant, on peut vérifier dans une console avec la commande "free" que la swap est de nouveau disponible.</p>
-<p>Pour en savoir plus sur l'UUID : <a href="http://doc.ubuntu-fr.org/uuid_et_label">http://doc.ubuntu-fr.org/uuid_et_label</a></p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>

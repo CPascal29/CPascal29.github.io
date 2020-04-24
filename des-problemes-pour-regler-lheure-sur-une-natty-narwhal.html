@@ -6,9 +6,10 @@
     
     <title>Le coin de Tropez</title>
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css">
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-device-width:7in)" href="/static/css/minStyle.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link rel="stylesheet" href="/static/tipuesearch/tipuesearch.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
         
     
     
@@ -37,9 +38,42 @@
        </ul></span>
 </header>
     <div class="main"> 
+        
+        <div class="content">
+<section class="article">
+    <header>
+        <h1>Des problèmes pour régler l'heure sur une Natty Narwhal ?</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2011-08-21T19:31:00+02:00" pubdate>
+                    le dim. 21 août 2011
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/bug.html">bug</a></li>
+                <a class="link-item" href="/tag/date.html">date</a></li>
+                <a class="link-item" href="/tag/heure.html">heure</a></li>
+                <a class="link-item" href="/tag/ubuntu.html">Ubuntu</a></li>
+                <a class="link-item" href="/tag/reglage.html">réglage</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <p>Il y a apparemment un petit bug gênant dans la version 11.04 d'Ubuntu qui concerne le réglage de l'heure. Que l'on clique sur "Date &amp; heure" dans le menu Système/Préférences ou sur "Réglage de la date et de l'heure" dans l'applet horloge du tableau de bord, rien ne se lance.</p>
+<p>Le bug ne se manifeste pas systématiquement et concerne le processus indicator-datetime. Il est tracé sur https://bugs.launchpad.net/ubuntu sous le numéro <a href="https://bugs.launchpad.net/ubuntu/+source/indicator-datetime/+bug/751175">#751175</a>.</p>
+<p>La solution actuelle après un échec de lancement (pour ceux qui ne sont pas trop à l'aise avec l'anglais) consiste à lancer un terminal, afficher les processus en cours avec la commande "ps aux", repérer le numéro du processus indicator-datetime et le supprimer avec la commande kill. La tentative suivante pour afficher la fenêtre de réglage de la date et l'heure fonctionnera correctement.</p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+        </div>
+        
 <nav class="sidebar-nav">
     
-<form action="search.html">
+<form action="/search.html">
 <div class="tipue_search_group">
 <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
 <button type="submit" class="tipue_search_button"><div class="tipue_search_icon">OK</div></button>
@@ -92,38 +126,7 @@
             </dd>
         </dl>
     </ul>
-</nav>        <div class="content">
-<section class="article">
-    <header>
-        <h1>Des problèmes pour régler l'heure sur une Natty Narwhal ?</h1>
-        <div class="metadata">
-            <p>
-                <a href="/author/tropez.html" rel="author">Tropez</a>
-                <time datetime="2011-08-21T19:31:00+02:00" pubdate>
-                    le dim. 21 août 2011
-                </time>
-            </p>
-            <p>
-                <a class="link-item" href="/tag/bug.html">bug</a></li>
-                <a class="link-item" href="/tag/date.html">date</a></li>
-                <a class="link-item" href="/tag/heure.html">heure</a></li>
-                <a class="link-item" href="/tag/ubuntu.html">Ubuntu</a></li>
-                <a class="link-item" href="/tag/reglage.html">réglage</a></li>
-            </p>
-        </div>
-    </header>
-    <hr>
-    <div class="article-content">
-        <p>Il y a apparemment un petit bug gênant dans la version 11.04 d'Ubuntu qui concerne le réglage de l'heure. Que l'on clique sur "Date &amp; heure" dans le menu Système/Préférences ou sur "Réglage de la date et de l'heure" dans l'applet horloge du tableau de bord, rien ne se lance.</p>
-<p>Le bug ne se manifeste pas systématiquement et concerne le processus indicator-datetime. Il est tracé sur https://bugs.launchpad.net/ubuntu sous le numéro <a href="https://bugs.launchpad.net/ubuntu/+source/indicator-datetime/+bug/751175">#751175</a>.</p>
-<p>La solution actuelle après un échec de lancement (pour ceux qui ne sont pas trop à l'aise avec l'anglais) consiste à lancer un terminal, afficher les processus en cours avec la commande "ps aux", repérer le numéro du processus indicator-datetime et le supprimer avec la commande kill. La tentative suivante pour afficher la fenêtre de réglage de la date et l'heure fonctionnera correctement.</p>
-    </div>
-    <hr>
-    <footer>
-    </footer>
-</section>
-        </div>
-    </div>
+</nav>    </div>
 
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>
