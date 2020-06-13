@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+
+    <title>Le coin de Tropez</title>
+    <!--<link
+      rel="stylesheet"
+      media="screen and (max-width:640px)"
+      href="/static/css/minStyle.css"
+      type="text/css"
+    />-->
+    <link
+      rel="stylesheet"
+      href="/static/css/style.css"
+      type="text/css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/static/images/favicon.ico"
+    />
+    <link 
+      rel="stylesheet" 
+      href="/static/tipuesearch/tipuesearch.css"
+      type="text/css"
+    />
+    <link 
+      rel="stylesheet" 
+      href="/static/css/normalize.css" 
+      type="text/css" 
+    />
+
+    
+    
+
+    <meta name="tags" content="blog" />
+    <meta name="tags" content="pelican" />
+    <meta name="tags" content="dotclear" />
+    <meta name="tags" content="transfert" />
+  </head>
+
+  <body>
+<header class="header-bar">
+  <span class="header-title"><a class="header-nav" href="/">Le coin de Tropez</a></span>
+  <div class="inline">
+    <ul class="categories">
+      <li>
+        <a href="/category/general.html">General (4)</a>
+      </li>
+      <li>
+        <a href="/category/linux.html">Linux (41)</a>
+      </li>
+      <li>
+        <a href="/category/wifi.html">Wifi (11)</a>
+      </li>
+    </ul>
+  </div>
+</header>
+    <div class="main">
+      <div class="content">
+<section class="article">
+    <header>
+        <h1>De Dotclear à Pelican</h1>
+        <div class="metadata">
+            <p>
+                <a href="/author/tropez.html" rel="author">Tropez</a>
+                <time datetime="2020-06-12T18:27:00+02:00" pubdate>
+                    le ven. 12 juin 2020
+                </time>
+            </p>
+            <p>
+                <a class="link-item" href="/tag/blog.html">blog</a></li>
+                <a class="link-item" href="/tag/pelican.html">pelican</a></li>
+                <a class="link-item" href="/tag/dotclear.html">dotclear</a></li>
+                <a class="link-item" href="/tag/transfert.html">transfert</a></li>
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="article-content">
+        <h3>Transfert du blog Dotclear vers un site statique à base de pelican (Python)</h3>
+<p><strong>Références :</strong></p>
+<ol>
+<li><a href="https://zestedesavoir.com/tutoriels/2497/creer-un-site-web-statique-avec-pelican">https://zestedesavoir.com/tutoriels/2497/creer-un-site-web-statique-avec-pelican</a></li>
+<li><a href="http://docs.getpelican.com/en/3.6.3/index.html">http://docs.getpelican.com/en/3.6.3/index.html</a></li>
+<li><a href="https://docs.getpelican.com/en/3.0/fr/pelican-themes.html">https://docs.getpelican.com/en/3.0/fr/pelican-themes.html</a></li>
+<li><a href="http://mygeekdaddy.net/2014/11/17/adding-local-search-to-pelican/">http://mygeekdaddy.net/2014/11/17/adding-local-search-to-pelican/</a></li>
+<li><a href="https://github.com/getpelican/pelican-plugins/tree/master/tipue_search">https://github.com/getpelican/pelican-plugins/tree/master/tipue_search</a></li>
+<li><a href="https://tipue.com/search/">https://tipue.com/search/</a></li>
+</ol>
+<p>Le tutoriel sur "Zeste de savoir" a été mon fil conducteur tout au long de la création du site.</p>
+<p>J'utilise Ubuntu 18.04 comme système d'exploitation.</p>
+<p><strong>Installation de Pelican :</strong></p>
+<p>L'installation peut se faire globalement ou dans un environnement virtuel. En accord avec ce qui est proposé sur "Zeste de savoir", j'ai utilisé un environnement virtuel. </p>
+<p>Au moment où j'écris ce tutoriel, Python 2.7 et Python 3 cohabitent encore souvent sur les systèmes d'exploitation. Dans la mesure du possible, il vaut mieux privilégier Python 3. De même, je préfère utiliser le module venv de Python 3 plutôt que Virtualenv. </p>
+<p>Les commandes utilisées ci-après sont à exécuter dans un terminal.</p>
+<p>Création de l'environnement virtuel :</p>
+<ul>
+<li><em>python3 -m venv ~/projets/tropezblog/venv</em></li>
+<li><em>cd ~/projets/tropezblog</em></li>
+<li><em>source venv/bin/activate</em></li>
+</ul>
+<p>Installation de pelican :</p>
+<ul>
+<li><em>pip install pelican Markdown</em></li>
+</ul>
+<p>Configuration initiale du site :</p>
+<ul>
+<li><em>pelican-quickstart</em></li>
+</ul>
+<p>Cette commande lance un script interactif qui va pré-remplir les fichiers de configuration (tout pourra être modifié par la suite dans le fichier pelicanconf.py). En dehors des données de personnalisation propres au site en création (nom, auteur), il suffit d'accepter la plupart des réponses par défaut. Il n'y a qu'à la question : <em>Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)</em> que j'ai répondu non.</p>
+<p><strong>Fonctionnement de pelican :</strong></p>
+<p>A ce stade de l'installation, pelican a créé les répertoires et fichiers suivants dans ~/projets/tropezblog/ :</p>
+<p>content/<br>
+output/<br>
+pelicanconf.py<br>
+publishconf.py</p>
+<p>En pratique, on écrit des fichiers au format markdown qui sont stockés dans le répertoire content et pelican se charge d'en faire des fichiers HTML qui sont enregistrés dans le répertoire output. C'est le contenu d'output qui doit être exporté vers votre hébergement web.</p>
+<p>La commande pelican --help permet de voir toutes les options de Pelican.</p>
+<p>pelicanconf.py est le fichier de configuration de pelican. C'est là qu'on peut compléter ou modifier ce qui a été enregistré par le script pelican-quickstart.<br>
+publishconf.py ne sert que si on a répondu oui à l'option "<em>Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n)".</em></p>
+<p>Plus précisément, après avoir écrit et enregistrés les fichiers markdown avec notre éditeur de texte favori dans le répertoire content, on tape  <em>pelican</em> et les fichiers HTML sont générés dans output.</p>
+<p>Deux options de pelican sont très utiles et permettent d'économiser ses doigts et son clavier :</p>
+<ul>
+<li><em>pelican -l</em> : lance un serveur interne qui affiche le rendu du site sur <a href="http://localhost:8000">http://localhost:8000</a></li>
+<li><em>pelican -r</em> : relance automatiquement pelican chaque fois qu'un fichier quel qu'il soit est modifié.</li>
+</ul>
+<p>Donc pour résumer, lorsque je veux travailler sur mon site :</p>
+<p>je lance un terminal<br>
+<em>cd ~/projets/tropezblog/</em><br>
+<em>source venv/bin/activate</em><br>
+<em>pelican -l -r</em>  </p>
+<p>je démarre un navigateur et je vais sur <a href="http://localhost:8000">http://localhost:8000</a></p>
+<p>je démarre mon éditeur de texte et je travaille sur les fichiers du site (articles, css, images, configuration,...)</p>
+<p>je rafraîchi le navigateur pour voir le résultat</p>
+<p>quand j'ai fini, je retourne dans le terminal<br>
+<em>Ctrl C</em> pour arrêter le serveur pelican<br>
+<em>deactivate</em> pour sortir de l'environnement virtuel.</p>
+<p>Quand, tout est prêt, je copie le contenu d'output sur mon hébergement via ftp. Le cas échéant, on peut également utiliser git.</p>
+<p><strong>Import des données du blog Dotclear :</strong></p>
+<p>Installation des dépendances nécessaires à l'import des données de mon blog Dotclear :</p>
+<ul>
+<li><em>pip install BeautifulSoup4 lxml</em></li>
+<li><em>sudo apt install pandoc</em></li>
+</ul>
+<p>J'ai également récupéré une sauvegarde de ma base de données Dotclear.</p>
+<p>L'importation des données se fait via l'outil "pelican-import" (pour avoir une idée de ce que ce dernier sait faire, voir le site en référence 2) :</p>
+<ul>
+<li><em>pelican-import --dotclear -o content -m markdown backupDotclear.txt</em></li>
+</ul>
+<p>lire :</p>
+<ul>
+<li>-m markdown : import des articles au format markdown</li>
+<li>-o content : les fichiers markdown obtenus sont copiés dans le répertoire "content" de pelican.</li>
+</ul>
+<p>Il n'est pas inutile de faire un peu de cosmétique dans les fichiers obtenus mais cela peut fonctionner sans.</p>
+<p><strong>Personnalisation du thème :</strong></p>
+<p>L'installation d'un thème se fait par l'outil <em>pelican-themes. </em>On peut voir les options disponibles en  tapant :</p>
+<ul>
+<li><em>pelican-themes -h (ou --help)</em>.</li>
+<li><em>pelican-theme -l</em> liste les thèmes installés</li>
+<li><em>pelican-theme -i</em> theme_path installe un thème</li>
+<li><em>pelican-theme -r</em> theme_name désinstalle un thème</li>
+</ul>
+<p>Le site <a href="http://www.pelicanthemes.com/">http://www.pelicanthemes.com/</a> présente les thèmes disponibles pour pelican. Ils sont récupérables sur Github : <a href="https://github.com/getpelican/pelican-themes">https://github.com/getpelican/pelican-themes</a>.</p>
+<p>J'ai essayé d'en trouver un proche de ce que je voulais obtenir afin de le modifier par la suite mais cela s'est avéré plus complexe que prévu, ces thèmes étant assez sophistiqués (javascript) et mes connaissances dans le domaine un peu trop limitées. Du coup, retour vers le thème de base proposé par "zeste de savoir" (cf. réf 1) plus facile à améliorer et avec l'avantage d'apprendre à créer un thème à partir de zéro.</p>
+<p>Pelican utilise le moteur de template Jinja2. </p>
+<p>Les templates se divisent en différentes pages HTML ayant chacune une fonction particulière.</p>
+<p>A cela s'ajoute la possibilité de diviser une page en plusieurs "morceaux", pour éviter de réécrire les éléments qui se répètent. Concrètement cela se traduit par la création d'un squelette (base.html) servant de base à la création d'une page puis sa personnalisation en important des morceaux de page via la commande : </p>
+<p><em>{% include 'chemin du morceau.html' %}</em></p>
+<p>Par exemple, voici, arrivé là, ma page base.html :</p>
+<p><img alt="base.html" src="/images/BaseHtml.png"></p>
+<p>Et ma page index.html :</p>
+<p><img alt="index.html" src="/images/IndexHtml.png"></p>
+<p>Tout cela est très clairement expliqué sur zeste de savoir ou dans la documentation pélican (réf. 1 et 3).</p>
+<p>Le thème utilise également des variables qui sont définies dans le fichier pelicanconf.py (emplacement des fichiers du thème par exemple).</p>
+<p>Mon arborescence de pélican se complète donc d'un répertoire pour mon thème dont le contenu est :</p>
+<p><img alt="Arborescence theme" src="/images/TropezTheme.png"></p>
+<p>Le répertoire "parts" (qu'on peut aussi appeler "includes") contient les morceaux html. Il n'est pas obligatoire de les mettre dans un répertoire spécifique mais ça ne coûte rien et cela facilite l'exploitation du site. Le mien contient, à ce stade, les fichiers :<br>
+articles-list.part.html,<br>
+footer.part.html,<br>
+header.part.html,<br>
+high-level-list.part.html<br>
+sidebar.part.html.</p>
+<p>J'ai adopté un style avec une barre latérale. Celle-ci contient une liste de liens. Ces derniers sont définis sous forme de variables dans le fichier pelicanconf.py.</p>
+<p>A ce stade, mon fichier pelicanconf.py ressemble à ça :</p>
+<p><img alt="pelicanconf.py" src="/images/PelicanconfPy.png"></p>
+<p><strong>Ajout d'un champs de recherche - les plugins</strong></p>
+<p>Pour inclure un champs de recherche dans ma barre latérale, j'ai utilisé le plugin Tipue Search. Au départ, je me suis appuyé sur les sites en références 5 et 6. J'ai eu un peu de mal à voir exactement ce qu'il fallait faire et c'est après avoir trouvé le site en référence 4 que j'ai pu obtenir un champs de recherche fonctionnel (même si le site est un peu ancien et certains liens ne fonctionnent plus). Au bilan, cela se traduit par :</p>
+<ul>
+<li>
+<p>installation de beautifulsoup4 (<em>pip install BeautifulSoup4, </em>déjà fait en ce qui me concerne pour l'import dotclear, voir ci-dessus);</p>
+</li>
+<li>
+<p>téléchargement des fichiers de thème sur tipue.con (réf. 6). Après décompression de l'archive obtenue, j'en ai extrait le répertoire tipuesearch (qui contient les fichier css et js) et je l'ai copié dans le répertoire static de tropeztheme. Attention, le fichier tipuesearch_content.js est à supprimer, il sera créé automatiquement par le plugin dans le répertoire output;</p>
+</li>
+<li>
+<p>téléchargement des fichiers du plugin tipue_search (tipue_search.py, __init__.py) sur github (réf. 5). J'ai copié ces fichiers dans un répertoire tipue_search lui même placé dans un répertoire plugins créé à la racine de l'arborescence pelican aux côtés de content, output et tropeztheme;</p>
+</li>
+<li>
+<p>téléchargement du fichier normalize.css sur <a href="https://cdnjs.com/libraries/normalize">https://cdnjs.com/libraries/normalize</a> et copie dans tropeztheme/static/css;</p>
+</li>
+<li>
+<p>téléchargement du fichier jquery-3.5.0.min.js (version au moment où j'ai fait la manipulation) sur <a href="https://jquery.com/download/">https://jquery.com/download/</a> et copie dans tropeztheme/static/js;</p>
+</li>
+<li>
+<p>ajout dans l'en-tète du fichier base.html des lignes suivantes :</p>
+<p><img alt="Ajout header base.html pour tipue" src="/images/BaseHeaderTipue.png"></p>
+</li>
+<li>
+<p>ajout dans le fichier pelicanconf.py des lignes suivantes :</p>
+<p>PLUGIN_PATHS = ['plugins']<br>
+PLUGINS = ['tipue_search']<br>
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']</p>
+</li>
+<li>
+<p>création dans le répertoire /templates/parts d'un fichier search.part.html servant à afficher le champs de recherche. Le contenu que j'ai adopté mais qui pourrait bien sur être amélioré est : </p>
+<p><img alt="search-part.html" src="/images/SearchPartHtml.png"></p>
+</li>
+<li>
+<p>affichage du champs de recherche dans la barre latérale en appelant le contenu de search.part.html dans le fichier sidebar.part.html via la commande :</p>
+<p>{% include '/parts/search.part.html' %};</p>
+</li>
+<li>
+<p>création dans le répertoire /templates d'un fichier search.html servant à afficher les résultats de recherche. Le mien contient :</p>
+<p><img alt="search.html" src="/images/SearchHtml.png"></p>
+</li>
+</ul>
+<p><strong><em>Prochaine étape : rendre l'affichage du site adapté aux écrans de smartphones...</em></strong></p>
+    </div>
+    <hr>
+    <footer>
+    </footer>
+</section>
+      </div>
+
+<nav class="sidebar-nav">
+
+<form action="/search.html">
+    <div class="tipue_search_group">
+        <input type="text" name="q" id="tipue_search_input" title="au moins trois caractères" required>
+        <button type="submit" class="tipue_search_button"><span class="tipue_search_icon">OK</span></button>
+    </div>
+</form>
+    <dl class="links">
+        <dt>
+            Le monde Libre
+        </dt>
+        <dd>
+            <a href="https://aful.org/">Aful</a>
+        </dd>
+        <dd>
+            <a href="https://www.april.org/">APRIL</a>
+        </dd>
+        <dd>
+            <a href="http://www.finix.eu.org/">Finix</a>
+        </dd>
+        <dd>
+            <a href="https://www.infini.fr/">Infini</a>
+        </dd>
+        <dd>
+            <a href="http://www.lekermeur.net/blog_du_net/">Le Net du Kermeur</a>
+        </dd>
+        <dd>
+            <a href="https://www.mdl29.net/">Maison du libre</a>
+        </dd>
+        <dd>
+            <a href="https://tyfab.fr/">Tyfab</a>
+        </dd>
+
+        <dt>
+            Associations
+        </dt>
+        <dd>
+            <a href="https://www.yoga-brest.bzh">Dyvi : Du Yoga vers la VIe</a>
+        </dd>
+        <dd>
+            <a href="https://www.aikikai-plouzane.fr/">Le club D'aikido (FFAB) de Plouzané</a>
+        </dd>
+
+        <dt>
+            Blogs
+        </dt>
+        <dd>
+            <a href="https://base-art.net/">Base-Art</a>
+        </dd>
+        <dd>
+            <a href="http://www.cure.nom.fr/">David on net</a>
+        </dd>
+        <dd>
+            <a href="http://www.larsen-b.com/">Jkx@home</a>
+        </dd>
+    </dl>
+</nav>    </div>
+
+<footer class="footer-bar">
+    <span class="footer-copyright">© Le coin de Tropez</span>
+    <p>réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
+</footer>  </body>
+</html>
