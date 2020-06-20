@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <title>Le coin de Tropez</title>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Le coin de Tropez</title>
     <link
       rel="stylesheet"
       media="screen and (min-width:320px) and (max-width:767px)"
@@ -224,14 +225,31 @@ DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'searc
 </li>
 <li>
 <p>affichage du champs de recherche dans la barre latérale en appelant le contenu de search.part.html dans le fichier sidebar.part.html via la commande :</p>
-<p>{% include '/parts/search.part.html' %};</p>
+<p>{% include '/parts/search.part.html' %}</p>
 </li>
 <li>
 <p>création dans le répertoire /templates d'un fichier search.html servant à afficher les résultats de recherche. Le mien contient :</p>
 <p><img alt="search.html" src="/images/SearchHtml.png"></p>
 </li>
+<li>
+<p>un peu de cosmétique dans le fichier tipuesearch.css principalement pour adapter les couleurs et la taille du champs de recherche.</p>
+</li>
 </ul>
-<p><strong><em>Prochaine étape : rendre l'affichage du site adapté aux écrans de smartphones...</em></strong></p>
+<p><strong>Et pour finir, un peu de responsive</strong></p>
+<p>Un dernier petit effort, améliorer l'affichage sur les smartphones. J'ai tatonné quelques temps et lu pas mal de documentation sur le web. J'ai fini par obtenir l'effet recherché même si ma solution n'est ni la plus propre ni la plus optimisée. Le but était de passer d'un affichage sous la forme :</p>
+<p><img alt="Style normal" src="/images/StyleCss.png"></p>
+<p>à un affichage :</p>
+<p><img alt="Style responsive" src="/images/MinStyleCss.png"></p>
+<p>Cela se traduit par :</p>
+<ul>
+<li>
+<p>création d'un fichier minStyle.css dérivé du fichier style.css dans lequel j'ai, pour l'essentiel, enlevé tout ce qui est float ou flex-box; joué sur quelques marges (margin et surtout padding); enlevé toutes les largeurs fixes;</p>
+</li>
+<li>
+<p>modification de l'en-tête du fichier base.html en remplaçant l'appel du fichier style.css par :</p>
+<p><img alt="BaseHtml_Responsive" src="/images/Responsive.png"></p>
+</li>
+</ul>
     </div>
     <hr>
     <footer>
