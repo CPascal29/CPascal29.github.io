@@ -170,6 +170,14 @@ section.article header h1 {
   text-align: center;
 }
 
+.metadata {
+  padding: 5px;
+}
+
+.article-content {
+  padding: 5px;
+}
+
 .link-item {
   color: #00be29;
   border: solid 1px #000;
