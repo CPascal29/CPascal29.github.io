@@ -5,8 +5,9 @@
   background-color: #004000;
   background-image: url("/static/images/top.png");
   background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -15,14 +16,8 @@ a.header-nav {
   color: #fff;
 }
 
-a.header-nav img {
-  height: 50px;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
 .header-title {
-  font-size: 50px;
+  font-size: 60px;
   margin-left: 50px;
   display: inline-block;
   vertical-align: middle;
@@ -30,6 +25,7 @@ a.header-nav img {
 
 .inline {
   margin-right: 50px;
+  text-align: right;
 }
 
 .inline li {

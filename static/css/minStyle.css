@@ -31,6 +31,10 @@ a.header-nav {
   font-size: 40px;
 }
 
+.inline ul {
+  padding: 0;
+}
+
 .inline li {
   display: inline;
 }
