@@ -91,9 +91,15 @@
 <blockquote>
 <p>sudo -i</p>
 <p>su gdm -s /bin/bash</p>
+</blockquote>
+<p>Ensuite deux cas de figure, sous Ubuntu 18.04 :</p>
+<blockquote>
 <p>gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'</p>
 </blockquote>
-<p>Merci à Lynn qui a donné cette solution sur le forum ubuntu-fr : <a href="https://forum.ubuntu-fr.org/viewtopic.php?id=2024787">https://forum.ubuntu-fr.org/viewtopic.php?id=2024787</a></p>
+<p>Et sous Ubuntu 20.04 :</p>
+<blockquote>
+<p>gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state true</p>
+</blockquote>
     </div>
     <hr>
     <footer>
@@ -168,5 +174,5 @@
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>
     <p>réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
-</footer>  </body>
+</footer>    </body>
 </html>

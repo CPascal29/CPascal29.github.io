@@ -66,8 +66,8 @@ body {
 
 .content {
   order: 1;
-  width: 73%;
-  float: left;
+  width: 70%;
+ 
   margin-left: 0px;
   padding: 20px;
   background-color: #fff;
@@ -147,8 +147,8 @@ h5 {
   background-color: #fff;
   padding: 5px 5px;
   margin-left: 0px;
-  float: right;
-  height: 540px;
+
+  height: 550px;
   order: 2;
   border-radius: 5px;
 }

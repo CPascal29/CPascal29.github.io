@@ -83,8 +83,8 @@
     <hr>
     <div class="article-content">
         <p>Un petit script pour convertir des fichiers audio par paquets avec avconv sous linux :</p>
-<div class="highlight"><pre><span></span><code>*ls -1 | grep wma | awk -F. &#39;{print $1}&#39; | while read entree\rdo\ravconv -i <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.wma -b 192k <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.mp3\rdone\r*
-</code></pre></div>
+<div class="highlight"><pre><span></span>*ls -1 | grep wma | awk -F. &#39;{print $1}&#39; | while read entree\rdo\ravconv -i <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.wma -b 192k <span class="cp">${</span><span class="n">entree</span><span class="cp">}</span>.mp3\rdone\r*
+</pre></div>
     </div>
     <hr>
     <footer>
@@ -159,5 +159,5 @@
 <footer class="footer-bar">
     <span class="footer-copyright">© Le coin de Tropez</span>
     <p>réalisé à l'aide de <a href="https://docs.getpelican.com/en/stable/">Pelican</a></p>
-</footer>  </body>
+</footer>    </body>
 </html>
